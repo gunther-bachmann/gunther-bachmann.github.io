@@ -1,0 +1,20 @@
+#+BEGIN_HTML
+---
+layout: post
+title: About
+excerpt: About this blog, its intention, expected audience etc.
+categories:
+ - blogging
+tags:
+ - emacs
+ - org-mode
+ - jekyll
+published: true
+---
+#+END_HTML
+* About this blog
+  This blog is my first venture into blogging
+** Intention
+   It will mostly be about emacs and clojure related stuff
+** Expected audience
+   Mostly functional geeks

@@ -1,5 +1,0 @@
-#+title: Personal blog
-* Content
-  - emacs
-  - clojure
-  
