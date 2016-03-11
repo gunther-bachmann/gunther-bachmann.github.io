@@ -6,8 +6,8 @@
 </description>
     <link>http://gunther-bachmann.github.io/</link>
     <atom:link href="http://gunther-bachmann.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Mar 2016 16:56:28 +0100</pubDate>
-    <lastBuildDate>Fri, 11 Mar 2016 16:56:28 +0100</lastBuildDate>
+    <pubDate>Fri, 11 Mar 2016 17:48:47 +0100</pubDate>
+    <lastBuildDate>Fri, 11 Mar 2016 17:48:47 +0100</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -21,13 +21,13 @@ The general folder layout is described below
 &lt;/p&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 
-&lt;pre class=&quot;src src-bash&quot;&gt;tree blog # my folder for the whole blogging stuff
-# results in an output of (abbreviated)
-# blog
-# |-- jekyll        # &amp;lt;-- folder with the whole jekyll stuff (within which &#39;jekyll build&#39; is executed)
-# |   `-- _site     # &amp;lt;-- folder with generated site which is the repository for github pages
-# |-- org           # &amp;lt;-- folder with the org files (to be posted)
-# `-- org-jekyll.el # &amp;lt;-- emacs glue code
+&lt;pre class=&quot;src src-bash&quot;&gt;&lt;span style=&quot;color: #bb99b4;&quot;&gt;tree&lt;/span&gt; &lt;span style=&quot;color: #e0d0a0;&quot;&gt;blog&lt;/span&gt; &lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;my folder for the whole blogging stuff&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;results in an output of (abbreviated)&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;blog&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;|-- jekyll        # &amp;lt;-- folder with the whole jekyll stuff (within which &#39;jekyll build&#39; is executed)&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;|   `-- _site     # &amp;lt;-- folder with generated site which is the repository for github pages&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;|-- org           # &amp;lt;-- folder with the org files (to be posted)&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;`-- org-jekyll.el # &amp;lt;-- emacs glue code&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -42,14 +42,21 @@ The general folder layout is described below
 &lt;h3 id=&quot;orgheadline8&quot;&gt;local&lt;/h3&gt;
 &lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgheadline8&quot;&gt;
 &lt;/div&gt;&lt;div id=&quot;outline-container-orgheadline4&quot; class=&quot;outline-4&quot;&gt;
-&lt;h4 id=&quot;orgheadline4&quot;&gt;git clone &lt;a href=&quot;https://github.com/gunther-bachmann/gunther-bachmann.github.io.git&quot;&gt;https://github.com/gunther-bachmann/gunther-bachmann.github.io.git&lt;/a&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;orgheadline4&quot;&gt;clone the repository&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgheadline4&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;pre class=&quot;src src-bash&quot;&gt;&lt;span style=&quot;color: #b3c0a7;&quot;&gt;git&lt;/span&gt; &lt;span style=&quot;color: #a7aac0;&quot;&gt;clone&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;https://github.com/gunther-bachmann/gunther-bachmann.github.io.git&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&quot;outline-container-orgheadline5&quot; class=&quot;outline-4&quot;&gt;
 &lt;h4 id=&quot;orgheadline5&quot;&gt;install ruby (on macosx)&lt;/h4&gt;
 &lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgheadline5&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 
-&lt;pre class=&quot;src src-bash&quot;&gt;brew install ruby
+&lt;pre class=&quot;src src-bash&quot;&gt;&lt;span style=&quot;color: #a0d6e0;&quot;&gt;brew&lt;/span&gt; &lt;span style=&quot;color: #bba699;&quot;&gt;install&lt;/span&gt; &lt;span style=&quot;color: #c0a7bd;&quot;&gt;ruby&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -59,7 +66,7 @@ The general folder layout is described below
 &lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgheadline6&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 
-&lt;pre class=&quot;src src-bash&quot;&gt;gem install jekyll
+&lt;pre class=&quot;src src-bash&quot;&gt;&lt;span style=&quot;color: #bba699;&quot;&gt;gem&lt;/span&gt; &lt;span style=&quot;color: #bba699;&quot;&gt;install&lt;/span&gt; &lt;span style=&quot;color: #bb99b4;&quot;&gt;jekyll&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -69,7 +76,7 @@ The general folder layout is described below
 &lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgheadline7&quot;&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 
-&lt;pre class=&quot;src src-bash&quot;&gt;jekyll new .
+&lt;pre class=&quot;src src-bash&quot;&gt;&lt;span style=&quot;color: #bb99b4;&quot;&gt;jekyll&lt;/span&gt; &lt;span style=&quot;color: #b6a0e0;&quot;&gt;new&lt;/span&gt; &lt;span style=&quot;color: #b3c0a7;&quot;&gt;.&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -85,10 +92,10 @@ to load org-jekyll:
 &lt;/p&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 
-&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;;; ================================================== org jekyll
-(req-package org-jekyll
-  :require org
-  :load-path &quot;~/Documents/blog&quot;)
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;================================================== org jekyll&lt;/span&gt;
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;req-package&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;org-jekyll&lt;/span&gt;
+  &lt;span style=&quot;color: #70c0b1;&quot;&gt;:require&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;org&lt;/span&gt;
+  &lt;span style=&quot;color: #70c0b1;&quot;&gt;:load-path&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;~/Documents/blog&quot;&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;
@@ -97,132 +104,132 @@ please note the publishing function (differs from the reference at the top of th
 &lt;/p&gt;
 &lt;div class=&quot;org-src-container&quot;&gt;
 
-&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;;;; Emacs org-mode support for blogging with Jekyll.
-;;;
-;;; To use, just put this file somewhere in your emacs load path and
-;;; (require &#39;org-jekyll)
-;;;
-;;; An article showing its use can be found at:
-;;;    - http://www.gorgnegre.com/linux/using-emacs-orgmode-to-blog-with-jekyll.html
-;;;
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;Emacs org-mode support for blogging with Jekyll.&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;;;&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;To use, just put this file somewhere in your emacs load path and&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;(require &#39;org-jekyll)&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;;;&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;An article showing its use can be found at:&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;;;    &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;- http://www.gorgnegre.com/linux/using-emacs-orgmode-to-blog-with-jekyll.html&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;;;&lt;/span&gt;
 
-(provide &#39;org-jekyll)
-(require &#39;ox-publish)
-;; Define our org project to be exported. Run &quot;M-x org-export X pblog&quot; to
-;; export.
-(setq org-publish-project-alist
-      &#39;(
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;provide&lt;/span&gt; &#39;&lt;span style=&quot;color: #70c0b1;&quot;&gt;org-jekyll&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;require&lt;/span&gt; &#39;&lt;span style=&quot;color: #70c0b1;&quot;&gt;ox-publish&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;Define our org project to be exported. Run &quot;M-x org-export X pblog&quot; to&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;export.&lt;/span&gt;
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a7aac0;&quot;&gt;setq&lt;/span&gt; &lt;span style=&quot;color: #a7aac0;&quot;&gt;org-publish-project-alist&lt;/span&gt;
+      &#39;&lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;
 
-        (&quot;org-pblog&quot;
-         :base-directory &quot;/Users/bachmann/Documents/blog/org/&quot; ;; Path to your org files.
-         :base-extension &quot;org&quot;
-         :publishing-directory &quot;/Users/bachmann/Documents/blog/jekyll/&quot; ;; Path to your Jekyll project.
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 6
-         :html-extension &quot;html&quot;
-         :body-only t ;; Only export section between &amp;amp;lt;body&amp;amp;gt; &amp;amp;lt;/body&amp;amp;gt; tags
-         :section-numbers nil
-         :table-of-contents nil
+        &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;org-pblog&quot;&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:base-directory&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;/Users/bachmann/Documents/blog/org/&quot;&lt;/span&gt; &lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;Path to your org files.&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:base-extension&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;org&quot;&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:publishing-directory&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;/Users/bachmann/Documents/blog/jekyll/&quot;&lt;/span&gt; &lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;Path to your Jekyll project.&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:recursive&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;t&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:publishing-function&lt;/span&gt; &lt;span style=&quot;color: #a3e0a0;&quot;&gt;org-html-publish-to-html&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:headline-levels&lt;/span&gt; &lt;span style=&quot;color: #a3e0a0;&quot;&gt;6&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:html-extension&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;html&quot;&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:body-only&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;t&lt;/span&gt; &lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;Only export section between &amp;amp;lt;body&amp;amp;gt; &amp;amp;lt;/body&amp;amp;gt; tags&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:section-numbers&lt;/span&gt; &lt;span style=&quot;color: #bb99b4;&quot;&gt;nil&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:table-of-contents&lt;/span&gt; &lt;span style=&quot;color: #bb99b4;&quot;&gt;nil&lt;/span&gt;
 
-         :author &quot;Gunther Bachmann&quot;
-         :email &quot;gunther.bachmann@web.de&quot;
-         )
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:author&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;Gunther Bachmann&quot;&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:email&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;gunther.bachmann@web.de&quot;&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;
 
-        (&quot;org-static-pblog&quot;
-         :base-directory &quot;/Users/bachmann/Documents/blog/org/&quot;
-         :base-extension &quot;css\\|js\\|png\\|jpg\\|ico\\|gif\\|pdf\\|mp3\\|flac\\|ogg\\|swf\\|php\\|markdown\\|md\\|html\\|htm\\|sh\\|xml\\|gz\\|bz2\\|vcf\\|zip\\|txt\\|tex\\|otf\\|ttf\\|eot\\|rb\\|yml\\|htaccess\\|gitignore&quot;
-         :publishing-directory &quot;/Users/bachmann/Documents/blog/jekyll/&quot;
-         :recursive t
-         :publishing-function org-publish-attachment)
+        &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;org-static-pblog&quot;&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:base-directory&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;/Users/bachmann/Documents/blog/org/&quot;&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:base-extension&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;css&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;js&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;png&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;jpg&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;ico&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;gif&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;pdf&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;mp3&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;flac&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;ogg&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;swf&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;php&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;markdown&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;md&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;html&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;htm&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;sh&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;xml&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;gz&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;bz2&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;vcf&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;zip&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;txt&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;tex&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;otf&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;ttf&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;eot&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;rb&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;yml&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;htaccess&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;\\&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;|&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;gitignore&quot;&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:publishing-directory&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;/Users/bachmann/Documents/blog/jekyll/&quot;&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:recursive&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;t&lt;/span&gt;
+         &lt;span style=&quot;color: #70c0b1;&quot;&gt;:publishing-function&lt;/span&gt; &lt;span style=&quot;color: #99bbb4;&quot;&gt;org-publish-attachment&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;
 
-        (&quot;pblog&quot; :components (&quot;org-pblog&quot; &quot;org-static-pblog&quot;))
+        &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;pblog&quot;&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;:components&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;org-pblog&quot;&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;org-static-pblog&quot;&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;
 
-        ))
+        &lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
 
-;; Improve our blogging experience with Org-Jekyll. This code sets four
-;; functions with corresponding key bindings:
-;;
-;; C-c j n - Create new draft
-;; C-c j P - Post current draft
-;; C-c j d - Show all drafts
-;; C-c j p - Show all posts
-;;
-;; Once a draft has been posted (i.e., moved from the _drafts
-;; directory to _post with the required date prefix in the filename), we
-;; then need to html-export it to the jekyll rootdir (with org-publish).
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;Improve our blogging experience with Org-Jekyll. This code sets four&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;functions with corresponding key bindings:&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;;&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;C-c j n - Create new draft&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;C-c j P - Post current draft&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;C-c j d - Show all drafts&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;C-c j p - Show all posts&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;;&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;Once a draft has been posted (i.e., moved from the _drafts&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;directory to _post with the required date prefix in the filename), we&lt;/span&gt;
+&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;then need to html-export it to the jekyll rootdir (with org-publish).&lt;/span&gt;
 
-(global-set-key (kbd &quot;C-c j n&quot;) &#39;jekyll-draft-post)
-(global-set-key (kbd &quot;C-c j P&quot;) &#39;jekyll-publish-post)
-(global-set-key (kbd &quot;C-c j p&quot;) (lambda ()
-                                  (interactive)
-                                  (find-file &quot;~/Documents/blog/org/_posts/&quot;)))
-(global-set-key (kbd &quot;C-c j d&quot;) (lambda ()
-                                  (interactive)
-                                  (find-file &quot;~/Documents/blog/org/_drafts/&quot;)))
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b3c0a7;&quot;&gt;global-set-key&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #99bbb4;&quot;&gt;kbd&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;C-c j n&quot;&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt; &#39;&lt;span style=&quot;color: #a3e0a0;&quot;&gt;jekyll-draft-post&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b3c0a7;&quot;&gt;global-set-key&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #99bbb4;&quot;&gt;kbd&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;C-c j P&quot;&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt; &#39;&lt;span style=&quot;color: #e0a0bc;&quot;&gt;jekyll-publish-post&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b3c0a7;&quot;&gt;global-set-key&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #99bbb4;&quot;&gt;kbd&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;C-c j p&quot;&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;lambda&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;()&lt;/span&gt;
+                                  &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #9999bb;&quot;&gt;interactive&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;
+                                  &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a7aac0;&quot;&gt;find-file&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;~/Documents/blog/org/_posts/&quot;&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b3c0a7;&quot;&gt;global-set-key&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #99bbb4;&quot;&gt;kbd&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;C-c j d&quot;&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;lambda&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;()&lt;/span&gt;
+                                  &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #9999bb;&quot;&gt;interactive&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;
+                                  &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a7aac0;&quot;&gt;find-file&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;~/Documents/blog/org/_drafts/&quot;&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
 
-(defvar jekyll-directory &quot;~/Documents/blog/org/&quot;
-  &quot;Path to Jekyll blog.&quot;)
-(defvar jekyll-drafts-dir &quot;_drafts/&quot;
-  &quot;Relative path to drafts directory.&quot;)
-(defvar jekyll-posts-dir &quot;_posts/&quot;
-  &quot;Relative path to posts directory.&quot;)
-(defvar jekyll-post-ext &quot;.org&quot;
-  &quot;File extension of Jekyll posts.&quot;)
-(defvar jekyll-post-template
-  &quot;#+STARTUP: showall\n#+STARTUP: hidestars\n#+OPTIONS: H:2 num:nil tags:nil toc:1 timestamps:t\n#+BEGIN_HTML\n---\nlayout: post\ntitle: %s\nexcerpt: \ncategories:\n  -  \ntags:\n  -  \npublished: false\n---\n#+END_HTML\n\n** &quot;
-  &quot;Default template for Jekyll posts. %s will be replace by the post title.&quot;)
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #e78c45;&quot;&gt;jekyll-directory&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;~/Documents/blog/org/&quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #969896;&quot;&gt;&quot;Path to Jekyll blog.&quot;&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #e78c45;&quot;&gt;jekyll-drafts-dir&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;_drafts/&quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #969896;&quot;&gt;&quot;Relative path to drafts directory.&quot;&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #e78c45;&quot;&gt;jekyll-posts-dir&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;_posts/&quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #969896;&quot;&gt;&quot;Relative path to posts directory.&quot;&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #e78c45;&quot;&gt;jekyll-post-ext&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;.org&quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #969896;&quot;&gt;&quot;File extension of Jekyll posts.&quot;&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;defvar&lt;/span&gt; &lt;span style=&quot;color: #e78c45;&quot;&gt;jekyll-post-template&lt;/span&gt;
+  &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;#+STARTUP: showall\n#+STARTUP: hidestars\n#+OPTIONS: H:2 num:nil tags:nil toc:1 timestamps:t\n#+BEGIN_HTML\n---\nlayout: post\ntitle: %s\nexcerpt: \ncategories:\n  -  \ntags:\n  -  \npublished: false\n---\n#+END_HTML\n\n** &quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #969896;&quot;&gt;&quot;Default template for Jekyll posts. %s will be replace by the post title.&quot;&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
 
-(defun jekyll-make-slug (s)
-  &quot;Turn a string into a slug.&quot;
-  (replace-regexp-in-string
-   &quot; &quot; &quot;-&quot; (downcase
-            (replace-regexp-in-string
-             &quot;[^A-Za-z0-9 ]&quot; &quot;&quot; s))))
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;jekyll-make-slug&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a0d6e0;&quot;&gt;s&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #969896;&quot;&gt;&quot;Turn a string into a slug.&quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0afa7;&quot;&gt;replace-regexp-in-string&lt;/span&gt;
+   &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot; &quot;&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;-&quot;&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #9999bb;&quot;&gt;downcase&lt;/span&gt;
+            &lt;span style=&quot;color: #b9ca4a;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0afa7;&quot;&gt;replace-regexp-in-string&lt;/span&gt;
+             &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;[&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;^&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;A-Za-z0-9 ]&quot;&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;s&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
 
-(defun jekyll-yaml-escape (s)
-  &quot;Escape a string for YAML.&quot;
-  (if (or (string-match &quot;:&quot; s)
-          (string-match &quot;\&quot;&quot; s))
-      (concat &quot;\&quot;&quot; (replace-regexp-in-string &quot;\&quot;&quot; &quot;\\\\\&quot;&quot; s) &quot;\&quot;&quot;)
-    s))
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;jekyll-yaml-escape&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a0d6e0;&quot;&gt;s&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #969896;&quot;&gt;&quot;Escape a string for YAML.&quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a7aac0;&quot;&gt;or&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #e0d0a0;&quot;&gt;string-match&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;:&quot;&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;s&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;)&lt;/span&gt;
+          &lt;span style=&quot;color: #b9ca4a;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #e0d0a0;&quot;&gt;string-match&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;\&quot;&quot;&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;s&lt;/span&gt;))
+      (&lt;span style=&quot;color: #c0a7bd;&quot;&gt;concat&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;\&quot;&quot;&lt;/span&gt; &lt;span style=&quot;color: #e7c547;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0afa7;&quot;&gt;replace-regexp-in-string&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;\&quot;&quot;&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;\\\\\&quot;&quot;&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;s&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;\&quot;&quot;&lt;/span&gt;)
+    &lt;span style=&quot;color: #a0d6e0;&quot;&gt;s&lt;/span&gt;))
 
-(defun jekyll-draft-post (title)
-  &quot;Create a new Jekyll blog post.&quot;
-  (interactive &quot;sPost Title: &quot;)
-  (let ((draft-file (concat jekyll-directory jekyll-drafts-dir
-                            (jekyll-make-slug title)
-                            jekyll-post-ext)))
-    (if (file-exists-p draft-file)
-        (find-file draft-file)
-      (find-file draft-file)
-      (insert (format jekyll-post-template (jekyll-yaml-escape title))))))
+(&lt;span style=&quot;color: #c397d8;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;jekyll-draft-post&lt;/span&gt; (&lt;span style=&quot;color: #a6bb99;&quot;&gt;title&lt;/span&gt;)
+  &lt;span style=&quot;color: #969896;&quot;&gt;&quot;Create a new Jekyll blog post.&quot;&lt;/span&gt;
+  (&lt;span style=&quot;color: #9999bb;&quot;&gt;interactive&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;sPost Title: &quot;&lt;/span&gt;)
+  (&lt;span style=&quot;color: #c397d8;&quot;&gt;let&lt;/span&gt; ((&lt;span style=&quot;color: #9999bb;&quot;&gt;draft-file&lt;/span&gt; (&lt;span style=&quot;color: #c0a7bd;&quot;&gt;concat&lt;/span&gt; &lt;span style=&quot;color: #e0d0a0;&quot;&gt;jekyll-directory&lt;/span&gt; &lt;span style=&quot;color: #a7aac0;&quot;&gt;jekyll-drafts-dir&lt;/span&gt;
+                            (&lt;span style=&quot;color: #c0a7bd;&quot;&gt;jekyll-make-slug&lt;/span&gt; &lt;span style=&quot;color: #a6bb99;&quot;&gt;title&lt;/span&gt;)
+                            &lt;span style=&quot;color: #9999bb;&quot;&gt;jekyll-post-ext&lt;/span&gt;)))
+    (&lt;span style=&quot;color: #c397d8;&quot;&gt;if&lt;/span&gt; (&lt;span style=&quot;color: #a7aac0;&quot;&gt;file-exists-p&lt;/span&gt; &lt;span style=&quot;color: #9999bb;&quot;&gt;draft-file&lt;/span&gt;)
+        (&lt;span style=&quot;color: #a7aac0;&quot;&gt;find-file&lt;/span&gt; &lt;span style=&quot;color: #9999bb;&quot;&gt;draft-file&lt;/span&gt;)
+      (&lt;span style=&quot;color: #a7aac0;&quot;&gt;find-file&lt;/span&gt; &lt;span style=&quot;color: #9999bb;&quot;&gt;draft-file&lt;/span&gt;)
+      (&lt;span style=&quot;color: #a7c0b9;&quot;&gt;insert&lt;/span&gt; (&lt;span style=&quot;color: #a0d6e0;&quot;&gt;format&lt;/span&gt; &lt;span style=&quot;color: #b6a0e0;&quot;&gt;jekyll-post-template&lt;/span&gt; (&lt;span style=&quot;color: #b6a0e0;&quot;&gt;jekyll-yaml-escape&lt;/span&gt; &lt;span style=&quot;color: #a6bb99;&quot;&gt;title&lt;/span&gt;))))))
 
-(defun jekyll-publish-post ()
-  &quot;Move a draft post to the posts directory, and rename it so that it
-contains the date.&quot;
-  (interactive)
-  (cond
-   ((not (equal
-          (file-name-directory (buffer-file-name (current-buffer)))
-          (concat jekyll-directory jekyll-drafts-dir)))
-    (message &quot;This is not a draft post.&quot;)
-    (insert (file-name-directory (buffer-file-name (current-buffer))) &quot;\n&quot;
-            (concat jekyll-directory jekyll-drafts-dir)))
-   ((buffer-modified-p)
-    (message &quot;Can&#39;t publish post; buffer has modifications.&quot;))
-   (t
-    (let ((filename
-           (concat jekyll-directory jekyll-posts-dir
-                   (format-time-string &quot;%Y-%m-%d-&quot;)
-                   (file-name-nondirectory
-                    (buffer-file-name (current-buffer)))))
-          (old-point (point)))
-      (rename-file (buffer-file-name (current-buffer))
-                   filename)
-      (kill-buffer nil)
-      (find-file filename)
-      (set-window-point (selected-window) old-point)))))
+(&lt;span style=&quot;color: #c397d8;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;jekyll-publish-post&lt;/span&gt; ()
+  &lt;span style=&quot;color: #969896;&quot;&gt;&quot;Move a draft post to the posts directory, and rename it so that it&lt;/span&gt;
+&lt;span style=&quot;color: #969896;&quot;&gt;contains the date.&quot;&lt;/span&gt;
+  (&lt;span style=&quot;color: #9999bb;&quot;&gt;interactive&lt;/span&gt;)
+  (&lt;span style=&quot;color: #c397d8;&quot;&gt;cond&lt;/span&gt;
+   ((&lt;span style=&quot;color: #9999bb;&quot;&gt;not&lt;/span&gt; (&lt;span style=&quot;color: #bb99b4;&quot;&gt;equal&lt;/span&gt;
+          (&lt;span style=&quot;color: #c0a7bd;&quot;&gt;file-name-directory&lt;/span&gt; (&lt;span style=&quot;color: #e0a0bc;&quot;&gt;buffer-file-name&lt;/span&gt; (&lt;span style=&quot;color: #e0a0bc;&quot;&gt;current-buffer&lt;/span&gt;)))
+          (&lt;span style=&quot;color: #c0a7bd;&quot;&gt;concat&lt;/span&gt; &lt;span style=&quot;color: #e0d0a0;&quot;&gt;jekyll-directory&lt;/span&gt; &lt;span style=&quot;color: #a7aac0;&quot;&gt;jekyll-drafts-dir&lt;/span&gt;)))
+    (&lt;span style=&quot;color: #99bbb4;&quot;&gt;message&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;This is not a draft post.&quot;&lt;/span&gt;)
+    (&lt;span style=&quot;color: #a7c0b9;&quot;&gt;insert&lt;/span&gt; (&lt;span style=&quot;color: #c0a7bd;&quot;&gt;file-name-directory&lt;/span&gt; (&lt;span style=&quot;color: #e0a0bc;&quot;&gt;buffer-file-name&lt;/span&gt; (&lt;span style=&quot;color: #e0a0bc;&quot;&gt;current-buffer&lt;/span&gt;))) &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;\n&quot;&lt;/span&gt;
+            (&lt;span style=&quot;color: #c0a7bd;&quot;&gt;concat&lt;/span&gt; &lt;span style=&quot;color: #e0d0a0;&quot;&gt;jekyll-directory&lt;/span&gt; &lt;span style=&quot;color: #a7aac0;&quot;&gt;jekyll-drafts-dir&lt;/span&gt;)))
+   ((&lt;span style=&quot;color: #a0d6e0;&quot;&gt;buffer-modified-p&lt;/span&gt;)
+    (&lt;span style=&quot;color: #99bbb4;&quot;&gt;message&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;Can&#39;t publish post; buffer has modifications.&quot;&lt;/span&gt;))
+   &lt;span style=&quot;color: #e7c547;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a0d6e0;&quot;&gt;t&lt;/span&gt;
+    &lt;span style=&quot;color: #e78c45;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;let&lt;/span&gt; &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #969896;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #99bbb4;&quot;&gt;filename&lt;/span&gt;
+           &lt;span style=&quot;color: #eaeaea;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0a7bd;&quot;&gt;concat&lt;/span&gt; &lt;span style=&quot;color: #e0d0a0;&quot;&gt;jekyll-directory&lt;/span&gt; &lt;span style=&quot;color: #b3c0a7;&quot;&gt;jekyll-posts-dir&lt;/span&gt;
+                   &lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b6a0e0;&quot;&gt;format-time-string&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;%Y-%m-%d-&quot;&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+                   &lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a7c0b9;&quot;&gt;file-name-nondirectory&lt;/span&gt;
+                    &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #e0a0bc;&quot;&gt;buffer-file-name&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #e0a0bc;&quot;&gt;current-buffer&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #eaeaea;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #969896;&quot;&gt;)&lt;/span&gt;
+          &lt;span style=&quot;color: #969896;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a7c0b9;&quot;&gt;old-point&lt;/span&gt; &lt;span style=&quot;color: #eaeaea;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #9999bb;&quot;&gt;point&lt;/span&gt;&lt;span style=&quot;color: #eaeaea;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #969896;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt;
+      &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0a7bd;&quot;&gt;rename-file&lt;/span&gt; &lt;span style=&quot;color: #969896;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #e0a0bc;&quot;&gt;buffer-file-name&lt;/span&gt; &lt;span style=&quot;color: #eaeaea;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #e0a0bc;&quot;&gt;current-buffer&lt;/span&gt;&lt;span style=&quot;color: #eaeaea;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #969896;&quot;&gt;)&lt;/span&gt;
+                   &lt;span style=&quot;color: #99bbb4;&quot;&gt;filename&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt;
+      &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0afa7;&quot;&gt;kill-buffer&lt;/span&gt; &lt;span style=&quot;color: #bb99b4;&quot;&gt;nil&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt;
+      &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a7aac0;&quot;&gt;find-file&lt;/span&gt; &lt;span style=&quot;color: #99bbb4;&quot;&gt;filename&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt;
+      &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a6bb99;&quot;&gt;set-window-point&lt;/span&gt; &lt;span style=&quot;color: #969896;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #99bbb4;&quot;&gt;selected-window&lt;/span&gt;&lt;span style=&quot;color: #969896;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #a7c0b9;&quot;&gt;old-point&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #e78c45;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;

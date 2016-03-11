@@ -67,13 +67,13 @@ The general folder layout is described below
 </p>
 <div class="org-src-container">
 
-<pre class="src src-bash">tree blog # my folder for the whole blogging stuff
-# results in an output of (abbreviated)
-# blog
-# |-- jekyll        # &lt;-- folder with the whole jekyll stuff (within which 'jekyll build' is executed)
-# |   `-- _site     # &lt;-- folder with generated site which is the repository for github pages
-# |-- org           # &lt;-- folder with the org files (to be posted)
-# `-- org-jekyll.el # &lt;-- emacs glue code
+<pre class="src src-bash"><span style="color: #bb99b4;">tree</span> <span style="color: #e0d0a0;">blog</span> <span style="color: #969896; font-style: italic;"># </span><span style="color: #969896; font-style: italic;">my folder for the whole blogging stuff</span>
+<span style="color: #969896; font-style: italic;"># </span><span style="color: #969896; font-style: italic;">results in an output of (abbreviated)</span>
+<span style="color: #969896; font-style: italic;"># </span><span style="color: #969896; font-style: italic;">blog</span>
+<span style="color: #969896; font-style: italic;"># </span><span style="color: #969896; font-style: italic;">|-- jekyll        # &lt;-- folder with the whole jekyll stuff (within which 'jekyll build' is executed)</span>
+<span style="color: #969896; font-style: italic;"># </span><span style="color: #969896; font-style: italic;">|   `-- _site     # &lt;-- folder with generated site which is the repository for github pages</span>
+<span style="color: #969896; font-style: italic;"># </span><span style="color: #969896; font-style: italic;">|-- org           # &lt;-- folder with the org files (to be posted)</span>
+<span style="color: #969896; font-style: italic;"># </span><span style="color: #969896; font-style: italic;">`-- org-jekyll.el # &lt;-- emacs glue code</span>
 </pre>
 </div>
 </div>
@@ -88,14 +88,21 @@ The general folder layout is described below
 <h3 id="orgheadline8">local</h3>
 <div class="outline-text-3" id="text-orgheadline8">
 </div><div id="outline-container-orgheadline4" class="outline-4">
-<h4 id="orgheadline4">git clone <a href="https://github.com/gunther-bachmann/gunther-bachmann.github.io.git">https://github.com/gunther-bachmann/gunther-bachmann.github.io.git</a></h4>
+<h4 id="orgheadline4">clone the repository</h4>
+<div class="outline-text-4" id="text-orgheadline4">
+<div class="org-src-container">
+
+<pre class="src src-bash"><span style="color: #b3c0a7;">git</span> <span style="color: #a7aac0;">clone</span> <span style="color: #a0d6e0;">https://github.com/gunther-bachmann/gunther-bachmann.github.io.git</span>
+</pre>
+</div>
+</div>
 </div>
 <div id="outline-container-orgheadline5" class="outline-4">
 <h4 id="orgheadline5">install ruby (on macosx)</h4>
 <div class="outline-text-4" id="text-orgheadline5">
 <div class="org-src-container">
 
-<pre class="src src-bash">brew install ruby
+<pre class="src src-bash"><span style="color: #a0d6e0;">brew</span> <span style="color: #bba699;">install</span> <span style="color: #c0a7bd;">ruby</span>
 </pre>
 </div>
 </div>
@@ -105,7 +112,7 @@ The general folder layout is described below
 <div class="outline-text-4" id="text-orgheadline6">
 <div class="org-src-container">
 
-<pre class="src src-bash">gem install jekyll
+<pre class="src src-bash"><span style="color: #bba699;">gem</span> <span style="color: #bba699;">install</span> <span style="color: #bb99b4;">jekyll</span>
 </pre>
 </div>
 </div>
@@ -115,7 +122,7 @@ The general folder layout is described below
 <div class="outline-text-4" id="text-orgheadline7">
 <div class="org-src-container">
 
-<pre class="src src-bash">jekyll new .
+<pre class="src src-bash"><span style="color: #bb99b4;">jekyll</span> <span style="color: #b6a0e0;">new</span> <span style="color: #b3c0a7;">.</span>
 </pre>
 </div>
 </div>
@@ -131,10 +138,10 @@ to load org-jekyll:
 </p>
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp">;; ================================================== org jekyll
-(req-package org-jekyll
-  :require org
-  :load-path "~/Documents/blog")
+<pre class="src src-emacs-lisp"><span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">================================================== org jekyll</span>
+<span style="color: #c397d8;">(</span><span style="color: #c397d8;">req-package</span> <span style="color: #70c0b1;">org-jekyll</span>
+  <span style="color: #70c0b1;">:require</span> <span style="color: #a0d6e0;">org</span>
+  <span style="color: #70c0b1;">:load-path</span> <span style="color: #b9ca4a;">"~/Documents/blog"</span><span style="color: #c397d8;">)</span>
 </pre>
 </div>
 <p>
@@ -143,132 +150,132 @@ please note the publishing function (differs from the reference at the top of th
 </p>
 <div class="org-src-container">
 
-<pre class="src src-emacs-lisp">;;; Emacs org-mode support for blogging with Jekyll.
-;;;
-;;; To use, just put this file somewhere in your emacs load path and
-;;; (require 'org-jekyll)
-;;;
-;;; An article showing its use can be found at:
-;;;    - http://www.gorgnegre.com/linux/using-emacs-orgmode-to-blog-with-jekyll.html
-;;;
+<pre class="src src-emacs-lisp"><span style="color: #969896; font-style: italic;">;;; </span><span style="color: #969896; font-style: italic;">Emacs org-mode support for blogging with Jekyll.</span>
+<span style="color: #969896; font-style: italic;">;;;</span>
+<span style="color: #969896; font-style: italic;">;;; </span><span style="color: #969896; font-style: italic;">To use, just put this file somewhere in your emacs load path and</span>
+<span style="color: #969896; font-style: italic;">;;; </span><span style="color: #969896; font-style: italic;">(require 'org-jekyll)</span>
+<span style="color: #969896; font-style: italic;">;;;</span>
+<span style="color: #969896; font-style: italic;">;;; </span><span style="color: #969896; font-style: italic;">An article showing its use can be found at:</span>
+<span style="color: #969896; font-style: italic;">;;;    </span><span style="color: #969896; font-style: italic;">- http://www.gorgnegre.com/linux/using-emacs-orgmode-to-blog-with-jekyll.html</span>
+<span style="color: #969896; font-style: italic;">;;;</span>
 
-(provide 'org-jekyll)
-(require 'ox-publish)
-;; Define our org project to be exported. Run "M-x org-export X pblog" to
-;; export.
-(setq org-publish-project-alist
-      '(
+<span style="color: #c397d8;">(</span><span style="color: #c397d8;">provide</span> '<span style="color: #70c0b1;">org-jekyll</span><span style="color: #c397d8;">)</span>
+<span style="color: #c397d8;">(</span><span style="color: #c397d8;">require</span> '<span style="color: #70c0b1;">ox-publish</span><span style="color: #c397d8;">)</span>
+<span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">Define our org project to be exported. Run "M-x org-export X pblog" to</span>
+<span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">export.</span>
+<span style="color: #c397d8;">(</span><span style="color: #a7aac0;">setq</span> <span style="color: #a7aac0;">org-publish-project-alist</span>
+      '<span style="color: #7aa6da;">(</span>
 
-        ("org-pblog"
-         :base-directory "/Users/bachmann/Documents/blog/org/" ;; Path to your org files.
-         :base-extension "org"
-         :publishing-directory "/Users/bachmann/Documents/blog/jekyll/" ;; Path to your Jekyll project.
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 6
-         :html-extension "html"
-         :body-only t ;; Only export section between &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; tags
-         :section-numbers nil
-         :table-of-contents nil
+        <span style="color: #70c0b1;">(</span><span style="color: #b9ca4a;">"org-pblog"</span>
+         <span style="color: #70c0b1;">:base-directory</span> <span style="color: #b9ca4a;">"/Users/bachmann/Documents/blog/org/"</span> <span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">Path to your org files.</span>
+         <span style="color: #70c0b1;">:base-extension</span> <span style="color: #b9ca4a;">"org"</span>
+         <span style="color: #70c0b1;">:publishing-directory</span> <span style="color: #b9ca4a;">"/Users/bachmann/Documents/blog/jekyll/"</span> <span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">Path to your Jekyll project.</span>
+         <span style="color: #70c0b1;">:recursive</span> <span style="color: #a0d6e0;">t</span>
+         <span style="color: #70c0b1;">:publishing-function</span> <span style="color: #a3e0a0;">org-html-publish-to-html</span>
+         <span style="color: #70c0b1;">:headline-levels</span> <span style="color: #a3e0a0;">6</span>
+         <span style="color: #70c0b1;">:html-extension</span> <span style="color: #b9ca4a;">"html"</span>
+         <span style="color: #70c0b1;">:body-only</span> <span style="color: #a0d6e0;">t</span> <span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">Only export section between &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; tags</span>
+         <span style="color: #70c0b1;">:section-numbers</span> <span style="color: #bb99b4;">nil</span>
+         <span style="color: #70c0b1;">:table-of-contents</span> <span style="color: #bb99b4;">nil</span>
 
-         :author "Gunther Bachmann"
-         :email "gunther.bachmann@web.de"
-         )
+         <span style="color: #70c0b1;">:author</span> <span style="color: #b9ca4a;">"Gunther Bachmann"</span>
+         <span style="color: #70c0b1;">:email</span> <span style="color: #b9ca4a;">"gunther.bachmann@web.de"</span>
+         <span style="color: #70c0b1;">)</span>
 
-        ("org-static-pblog"
-         :base-directory "/Users/bachmann/Documents/blog/org/"
-         :base-extension "css\\|js\\|png\\|jpg\\|ico\\|gif\\|pdf\\|mp3\\|flac\\|ogg\\|swf\\|php\\|markdown\\|md\\|html\\|htm\\|sh\\|xml\\|gz\\|bz2\\|vcf\\|zip\\|txt\\|tex\\|otf\\|ttf\\|eot\\|rb\\|yml\\|htaccess\\|gitignore"
-         :publishing-directory "/Users/bachmann/Documents/blog/jekyll/"
-         :recursive t
-         :publishing-function org-publish-attachment)
+        <span style="color: #70c0b1;">(</span><span style="color: #b9ca4a;">"org-static-pblog"</span>
+         <span style="color: #70c0b1;">:base-directory</span> <span style="color: #b9ca4a;">"/Users/bachmann/Documents/blog/org/"</span>
+         <span style="color: #70c0b1;">:base-extension</span> <span style="color: #b9ca4a;">"css</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">js</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">png</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">jpg</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">ico</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">gif</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">pdf</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">mp3</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">flac</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">ogg</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">swf</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">php</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">markdown</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">md</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">html</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">htm</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">sh</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">xml</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">gz</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">bz2</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">vcf</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">zip</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">txt</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">tex</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">otf</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">ttf</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">eot</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">rb</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">yml</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">htaccess</span><span style="color: #e7c547;">\\</span><span style="color: #c397d8;">|</span><span style="color: #b9ca4a;">gitignore"</span>
+         <span style="color: #70c0b1;">:publishing-directory</span> <span style="color: #b9ca4a;">"/Users/bachmann/Documents/blog/jekyll/"</span>
+         <span style="color: #70c0b1;">:recursive</span> <span style="color: #a0d6e0;">t</span>
+         <span style="color: #70c0b1;">:publishing-function</span> <span style="color: #99bbb4;">org-publish-attachment</span><span style="color: #70c0b1;">)</span>
 
-        ("pblog" :components ("org-pblog" "org-static-pblog"))
+        <span style="color: #70c0b1;">(</span><span style="color: #b9ca4a;">"pblog"</span> <span style="color: #70c0b1;">:components</span> <span style="color: #b9ca4a;">(</span><span style="color: #b9ca4a;">"org-pblog"</span> <span style="color: #b9ca4a;">"org-static-pblog"</span><span style="color: #b9ca4a;">)</span><span style="color: #70c0b1;">)</span>
 
-        ))
+        <span style="color: #7aa6da;">)</span><span style="color: #c397d8;">)</span>
 
-;; Improve our blogging experience with Org-Jekyll. This code sets four
-;; functions with corresponding key bindings:
-;;
-;; C-c j n - Create new draft
-;; C-c j P - Post current draft
-;; C-c j d - Show all drafts
-;; C-c j p - Show all posts
-;;
-;; Once a draft has been posted (i.e., moved from the _drafts
-;; directory to _post with the required date prefix in the filename), we
-;; then need to html-export it to the jekyll rootdir (with org-publish).
+<span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">Improve our blogging experience with Org-Jekyll. This code sets four</span>
+<span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">functions with corresponding key bindings:</span>
+<span style="color: #969896; font-style: italic;">;;</span>
+<span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">C-c j n - Create new draft</span>
+<span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">C-c j P - Post current draft</span>
+<span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">C-c j d - Show all drafts</span>
+<span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">C-c j p - Show all posts</span>
+<span style="color: #969896; font-style: italic;">;;</span>
+<span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">Once a draft has been posted (i.e., moved from the _drafts</span>
+<span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">directory to _post with the required date prefix in the filename), we</span>
+<span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">then need to html-export it to the jekyll rootdir (with org-publish).</span>
 
-(global-set-key (kbd "C-c j n") 'jekyll-draft-post)
-(global-set-key (kbd "C-c j P") 'jekyll-publish-post)
-(global-set-key (kbd "C-c j p") (lambda ()
-                                  (interactive)
-                                  (find-file "~/Documents/blog/org/_posts/")))
-(global-set-key (kbd "C-c j d") (lambda ()
-                                  (interactive)
-                                  (find-file "~/Documents/blog/org/_drafts/")))
+<span style="color: #c397d8;">(</span><span style="color: #b3c0a7;">global-set-key</span> <span style="color: #7aa6da;">(</span><span style="color: #99bbb4;">kbd</span> <span style="color: #b9ca4a;">"C-c j n"</span><span style="color: #7aa6da;">)</span> '<span style="color: #a3e0a0;">jekyll-draft-post</span><span style="color: #c397d8;">)</span>
+<span style="color: #c397d8;">(</span><span style="color: #b3c0a7;">global-set-key</span> <span style="color: #7aa6da;">(</span><span style="color: #99bbb4;">kbd</span> <span style="color: #b9ca4a;">"C-c j P"</span><span style="color: #7aa6da;">)</span> '<span style="color: #e0a0bc;">jekyll-publish-post</span><span style="color: #c397d8;">)</span>
+<span style="color: #c397d8;">(</span><span style="color: #b3c0a7;">global-set-key</span> <span style="color: #7aa6da;">(</span><span style="color: #99bbb4;">kbd</span> <span style="color: #b9ca4a;">"C-c j p"</span><span style="color: #7aa6da;">)</span> <span style="color: #7aa6da;">(</span><span style="color: #c397d8;">lambda</span> <span style="color: #70c0b1;">()</span>
+                                  <span style="color: #70c0b1;">(</span><span style="color: #9999bb;">interactive</span><span style="color: #70c0b1;">)</span>
+                                  <span style="color: #70c0b1;">(</span><span style="color: #a7aac0;">find-file</span> <span style="color: #b9ca4a;">"~/Documents/blog/org/_posts/"</span><span style="color: #70c0b1;">)</span><span style="color: #7aa6da;">)</span><span style="color: #c397d8;">)</span>
+<span style="color: #c397d8;">(</span><span style="color: #b3c0a7;">global-set-key</span> <span style="color: #7aa6da;">(</span><span style="color: #99bbb4;">kbd</span> <span style="color: #b9ca4a;">"C-c j d"</span><span style="color: #7aa6da;">)</span> <span style="color: #7aa6da;">(</span><span style="color: #c397d8;">lambda</span> <span style="color: #70c0b1;">()</span>
+                                  <span style="color: #70c0b1;">(</span><span style="color: #9999bb;">interactive</span><span style="color: #70c0b1;">)</span>
+                                  <span style="color: #70c0b1;">(</span><span style="color: #a7aac0;">find-file</span> <span style="color: #b9ca4a;">"~/Documents/blog/org/_drafts/"</span><span style="color: #70c0b1;">)</span><span style="color: #7aa6da;">)</span><span style="color: #c397d8;">)</span>
 
-(defvar jekyll-directory "~/Documents/blog/org/"
-  "Path to Jekyll blog.")
-(defvar jekyll-drafts-dir "_drafts/"
-  "Relative path to drafts directory.")
-(defvar jekyll-posts-dir "_posts/"
-  "Relative path to posts directory.")
-(defvar jekyll-post-ext ".org"
-  "File extension of Jekyll posts.")
-(defvar jekyll-post-template
-  "#+STARTUP: showall\n#+STARTUP: hidestars\n#+OPTIONS: H:2 num:nil tags:nil toc:1 timestamps:t\n#+BEGIN_HTML\n---\nlayout: post\ntitle: %s\nexcerpt: \ncategories:\n  -  \ntags:\n  -  \npublished: false\n---\n#+END_HTML\n\n** "
-  "Default template for Jekyll posts. %s will be replace by the post title.")
+<span style="color: #c397d8;">(</span><span style="color: #c397d8;">defvar</span> <span style="color: #e78c45;">jekyll-directory</span> <span style="color: #b9ca4a;">"~/Documents/blog/org/"</span>
+  <span style="color: #969896;">"Path to Jekyll blog."</span><span style="color: #c397d8;">)</span>
+<span style="color: #c397d8;">(</span><span style="color: #c397d8;">defvar</span> <span style="color: #e78c45;">jekyll-drafts-dir</span> <span style="color: #b9ca4a;">"_drafts/"</span>
+  <span style="color: #969896;">"Relative path to drafts directory."</span><span style="color: #c397d8;">)</span>
+<span style="color: #c397d8;">(</span><span style="color: #c397d8;">defvar</span> <span style="color: #e78c45;">jekyll-posts-dir</span> <span style="color: #b9ca4a;">"_posts/"</span>
+  <span style="color: #969896;">"Relative path to posts directory."</span><span style="color: #c397d8;">)</span>
+<span style="color: #c397d8;">(</span><span style="color: #c397d8;">defvar</span> <span style="color: #e78c45;">jekyll-post-ext</span> <span style="color: #b9ca4a;">".org"</span>
+  <span style="color: #969896;">"File extension of Jekyll posts."</span><span style="color: #c397d8;">)</span>
+<span style="color: #c397d8;">(</span><span style="color: #c397d8;">defvar</span> <span style="color: #e78c45;">jekyll-post-template</span>
+  <span style="color: #b9ca4a;">"#+STARTUP: showall\n#+STARTUP: hidestars\n#+OPTIONS: H:2 num:nil tags:nil toc:1 timestamps:t\n#+BEGIN_HTML\n---\nlayout: post\ntitle: %s\nexcerpt: \ncategories:\n  -  \ntags:\n  -  \npublished: false\n---\n#+END_HTML\n\n** "</span>
+  <span style="color: #969896;">"Default template for Jekyll posts. %s will be replace by the post title."</span><span style="color: #c397d8;">)</span>
 
-(defun jekyll-make-slug (s)
-  "Turn a string into a slug."
-  (replace-regexp-in-string
-   " " "-" (downcase
-            (replace-regexp-in-string
-             "[^A-Za-z0-9 ]" "" s))))
+<span style="color: #c397d8;">(</span><span style="color: #c397d8;">defun</span> <span style="color: #7aa6da;">jekyll-make-slug</span> <span style="color: #7aa6da;">(</span><span style="color: #a0d6e0;">s</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #969896;">"Turn a string into a slug."</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #c0afa7;">replace-regexp-in-string</span>
+   <span style="color: #b9ca4a;">" "</span> <span style="color: #b9ca4a;">"-"</span> <span style="color: #70c0b1;">(</span><span style="color: #9999bb;">downcase</span>
+            <span style="color: #b9ca4a;">(</span><span style="color: #c0afa7;">replace-regexp-in-string</span>
+             <span style="color: #b9ca4a;">"[</span><span style="color: #b9ca4a;">^</span><span style="color: #b9ca4a;">A-Za-z0-9 ]"</span> <span style="color: #b9ca4a;">""</span> <span style="color: #a0d6e0;">s</span><span style="color: #b9ca4a;">)</span><span style="color: #70c0b1;">)</span><span style="color: #7aa6da;">)</span><span style="color: #c397d8;">)</span>
 
-(defun jekyll-yaml-escape (s)
-  "Escape a string for YAML."
-  (if (or (string-match ":" s)
-          (string-match "\"" s))
-      (concat "\"" (replace-regexp-in-string "\"" "\\\\\"" s) "\"")
-    s))
+<span style="color: #c397d8;">(</span><span style="color: #c397d8;">defun</span> <span style="color: #7aa6da;">jekyll-yaml-escape</span> <span style="color: #7aa6da;">(</span><span style="color: #a0d6e0;">s</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #969896;">"Escape a string for YAML."</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #c397d8;">if</span> <span style="color: #70c0b1;">(</span><span style="color: #a7aac0;">or</span> <span style="color: #b9ca4a;">(</span><span style="color: #e0d0a0;">string-match</span> <span style="color: #b9ca4a;">":"</span> <span style="color: #a0d6e0;">s</span><span style="color: #b9ca4a;">)</span>
+          <span style="color: #b9ca4a;">(</span><span style="color: #e0d0a0;">string-match</span> <span style="color: #b9ca4a;">"\""</span> <span style="color: #a0d6e0;">s</span>))
+      (<span style="color: #c0a7bd;">concat</span> <span style="color: #b9ca4a;">"\""</span> <span style="color: #e7c547;">(</span><span style="color: #c0afa7;">replace-regexp-in-string</span> <span style="color: #b9ca4a;">"\""</span> <span style="color: #b9ca4a;">"\\\\\""</span> <span style="color: #a0d6e0;">s</span><span style="color: #e7c547;">)</span> <span style="color: #b9ca4a;">"\""</span>)
+    <span style="color: #a0d6e0;">s</span>))
 
-(defun jekyll-draft-post (title)
-  "Create a new Jekyll blog post."
-  (interactive "sPost Title: ")
-  (let ((draft-file (concat jekyll-directory jekyll-drafts-dir
-                            (jekyll-make-slug title)
-                            jekyll-post-ext)))
-    (if (file-exists-p draft-file)
-        (find-file draft-file)
-      (find-file draft-file)
-      (insert (format jekyll-post-template (jekyll-yaml-escape title))))))
+(<span style="color: #c397d8;">defun</span> <span style="color: #7aa6da;">jekyll-draft-post</span> (<span style="color: #a6bb99;">title</span>)
+  <span style="color: #969896;">"Create a new Jekyll blog post."</span>
+  (<span style="color: #9999bb;">interactive</span> <span style="color: #b9ca4a;">"sPost Title: "</span>)
+  (<span style="color: #c397d8;">let</span> ((<span style="color: #9999bb;">draft-file</span> (<span style="color: #c0a7bd;">concat</span> <span style="color: #e0d0a0;">jekyll-directory</span> <span style="color: #a7aac0;">jekyll-drafts-dir</span>
+                            (<span style="color: #c0a7bd;">jekyll-make-slug</span> <span style="color: #a6bb99;">title</span>)
+                            <span style="color: #9999bb;">jekyll-post-ext</span>)))
+    (<span style="color: #c397d8;">if</span> (<span style="color: #a7aac0;">file-exists-p</span> <span style="color: #9999bb;">draft-file</span>)
+        (<span style="color: #a7aac0;">find-file</span> <span style="color: #9999bb;">draft-file</span>)
+      (<span style="color: #a7aac0;">find-file</span> <span style="color: #9999bb;">draft-file</span>)
+      (<span style="color: #a7c0b9;">insert</span> (<span style="color: #a0d6e0;">format</span> <span style="color: #b6a0e0;">jekyll-post-template</span> (<span style="color: #b6a0e0;">jekyll-yaml-escape</span> <span style="color: #a6bb99;">title</span>))))))
 
-(defun jekyll-publish-post ()
-  "Move a draft post to the posts directory, and rename it so that it
-contains the date."
-  (interactive)
-  (cond
-   ((not (equal
-          (file-name-directory (buffer-file-name (current-buffer)))
-          (concat jekyll-directory jekyll-drafts-dir)))
-    (message "This is not a draft post.")
-    (insert (file-name-directory (buffer-file-name (current-buffer))) "\n"
-            (concat jekyll-directory jekyll-drafts-dir)))
-   ((buffer-modified-p)
-    (message "Can't publish post; buffer has modifications."))
-   (t
-    (let ((filename
-           (concat jekyll-directory jekyll-posts-dir
-                   (format-time-string "%Y-%m-%d-")
-                   (file-name-nondirectory
-                    (buffer-file-name (current-buffer)))))
-          (old-point (point)))
-      (rename-file (buffer-file-name (current-buffer))
-                   filename)
-      (kill-buffer nil)
-      (find-file filename)
-      (set-window-point (selected-window) old-point)))))
+(<span style="color: #c397d8;">defun</span> <span style="color: #7aa6da;">jekyll-publish-post</span> ()
+  <span style="color: #969896;">"Move a draft post to the posts directory, and rename it so that it</span>
+<span style="color: #969896;">contains the date."</span>
+  (<span style="color: #9999bb;">interactive</span>)
+  (<span style="color: #c397d8;">cond</span>
+   ((<span style="color: #9999bb;">not</span> (<span style="color: #bb99b4;">equal</span>
+          (<span style="color: #c0a7bd;">file-name-directory</span> (<span style="color: #e0a0bc;">buffer-file-name</span> (<span style="color: #e0a0bc;">current-buffer</span>)))
+          (<span style="color: #c0a7bd;">concat</span> <span style="color: #e0d0a0;">jekyll-directory</span> <span style="color: #a7aac0;">jekyll-drafts-dir</span>)))
+    (<span style="color: #99bbb4;">message</span> <span style="color: #b9ca4a;">"This is not a draft post."</span>)
+    (<span style="color: #a7c0b9;">insert</span> (<span style="color: #c0a7bd;">file-name-directory</span> (<span style="color: #e0a0bc;">buffer-file-name</span> (<span style="color: #e0a0bc;">current-buffer</span>))) <span style="color: #b9ca4a;">"\n"</span>
+            (<span style="color: #c0a7bd;">concat</span> <span style="color: #e0d0a0;">jekyll-directory</span> <span style="color: #a7aac0;">jekyll-drafts-dir</span>)))
+   ((<span style="color: #a0d6e0;">buffer-modified-p</span>)
+    (<span style="color: #99bbb4;">message</span> <span style="color: #b9ca4a;">"Can't publish post; buffer has modifications."</span>))
+   <span style="color: #e7c547;">(</span><span style="color: #a0d6e0;">t</span>
+    <span style="color: #e78c45;">(</span><span style="color: #c397d8;">let</span> <span style="color: #d54e53;">(</span><span style="color: #969896;">(</span><span style="color: #99bbb4;">filename</span>
+           <span style="color: #eaeaea;">(</span><span style="color: #c0a7bd;">concat</span> <span style="color: #e0d0a0;">jekyll-directory</span> <span style="color: #b3c0a7;">jekyll-posts-dir</span>
+                   <span style="color: #c397d8;">(</span><span style="color: #b6a0e0;">format-time-string</span> <span style="color: #b9ca4a;">"%Y-%m-%d-"</span><span style="color: #c397d8;">)</span>
+                   <span style="color: #c397d8;">(</span><span style="color: #a7c0b9;">file-name-nondirectory</span>
+                    <span style="color: #7aa6da;">(</span><span style="color: #e0a0bc;">buffer-file-name</span> <span style="color: #70c0b1;">(</span><span style="color: #e0a0bc;">current-buffer</span><span style="color: #70c0b1;">)</span><span style="color: #7aa6da;">)</span><span style="color: #c397d8;">)</span><span style="color: #eaeaea;">)</span><span style="color: #969896;">)</span>
+          <span style="color: #969896;">(</span><span style="color: #a7c0b9;">old-point</span> <span style="color: #eaeaea;">(</span><span style="color: #9999bb;">point</span><span style="color: #eaeaea;">)</span><span style="color: #969896;">)</span><span style="color: #d54e53;">)</span>
+      <span style="color: #d54e53;">(</span><span style="color: #c0a7bd;">rename-file</span> <span style="color: #969896;">(</span><span style="color: #e0a0bc;">buffer-file-name</span> <span style="color: #eaeaea;">(</span><span style="color: #e0a0bc;">current-buffer</span><span style="color: #eaeaea;">)</span><span style="color: #969896;">)</span>
+                   <span style="color: #99bbb4;">filename</span><span style="color: #d54e53;">)</span>
+      <span style="color: #d54e53;">(</span><span style="color: #c0afa7;">kill-buffer</span> <span style="color: #bb99b4;">nil</span><span style="color: #d54e53;">)</span>
+      <span style="color: #d54e53;">(</span><span style="color: #a7aac0;">find-file</span> <span style="color: #99bbb4;">filename</span><span style="color: #d54e53;">)</span>
+      <span style="color: #d54e53;">(</span><span style="color: #a6bb99;">set-window-point</span> <span style="color: #969896;">(</span><span style="color: #99bbb4;">selected-window</span><span style="color: #969896;">)</span> <span style="color: #a7c0b9;">old-point</span><span style="color: #d54e53;">)</span><span style="color: #e78c45;">)</span><span style="color: #e7c547;">)</span><span style="color: #b9ca4a;">)</span><span style="color: #70c0b1;">)</span>
 </pre>
 </div>
 </div>
