@@ -1,52 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Personal Blog</title>
-    <description>This will be a personal blog on my endeavors using emacs and clojure.
+    <title>Your awesome title</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>http://gunther-bachmann.github.io/</link>
-    <atom:link href="http://gunther-bachmann.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Mar 2016 16:10:03 +0100</pubDate>
-    <lastBuildDate>Fri, 11 Mar 2016 16:10:03 +0100</lastBuildDate>
+    <link>http://yourdomain.com/</link>
+    <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 11 Mar 2016 16:53:31 +0100</pubDate>
+    <lastBuildDate>Fri, 11 Mar 2016 16:53:31 +0100</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Fri, 11 Mar 2016 15:12:14 +0100</pubDate>
-        <link>http://gunther-bachmann.github.io/jekyll/update/2016/03/11/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://gunther-bachmann.github.io/jekyll/update/2016/03/11/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
     
       <item>
         <title>Blogging with Emacs Org-mode and Jekyll</title>
         <description>&lt;div id=&quot;outline-container-orgheadline1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgheadline1&quot;&gt;first blog entry&lt;/h2&gt;
+&lt;h2 id=&quot;orgheadline1&quot;&gt;installation&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgheadline1&quot;&gt;
+&lt;p&gt;
+reference: &lt;a href=&quot;http://www.gorgnegre.com/linux/using-emacs-orgmode-to-blog-with-jekyll.html&quot;&gt;http://www.gorgnegre.com/linux/using-emacs-orgmode-to-blog-with-jekyll.html&lt;/a&gt;
+The general folder layout is described below
+&lt;/p&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;pre class=&quot;src src-bash&quot;&gt;tree blog # my folder for the whole blogging stuff
+# results in an output of (abbreviated)
+# blog
+# |-- jekyll        # &amp;lt;-- folder with the whole jekyll stuff (within which &#39;jekyll build&#39; is executed)
+# |   `-- _site     # &amp;lt;-- folder with generated site which is the repository for github pages
+# |-- org           # &amp;lt;-- folder with the org files (to be posted)
+# `-- org-jekyll.el # &amp;lt;-- emacs glue code
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgheadline3&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgheadline3&quot;&gt;github&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgheadline3&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-orgheadline2&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgheadline2&quot;&gt;create repository named &quot;gunther-bachmann.github.io&quot;&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgheadline8&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgheadline8&quot;&gt;local&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgheadline8&quot;&gt;
+&lt;/div&gt;&lt;div id=&quot;outline-container-orgheadline4&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgheadline4&quot;&gt;git clone &lt;a href=&quot;https://github.com/gunther-bachmann/gunther-bachmann.github.io.git&quot;&gt;https://github.com/gunther-bachmann/gunther-bachmann.github.io.git&lt;/a&gt;&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgheadline5&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgheadline5&quot;&gt;install ruby (on macosx)&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgheadline5&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;pre class=&quot;src src-bash&quot;&gt;brew install ruby
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgheadline6&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgheadline6&quot;&gt;install jekyll&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgheadline6&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;pre class=&quot;src src-bash&quot;&gt;gem install jekyll
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgheadline7&quot; class=&quot;outline-4&quot;&gt;
+&lt;h4 id=&quot;orgheadline7&quot;&gt;initialize blog&lt;/h4&gt;
+&lt;div class=&quot;outline-text-4&quot; id=&quot;text-orgheadline7&quot;&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;pre class=&quot;src src-bash&quot;&gt;jekyll new .
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgheadline9&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgheadline9&quot;&gt;emacs&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgheadline9&quot;&gt;
+&lt;p&gt;
+Insert glue code into your init.el.
+Since I use req-package to organize my packages this is my code snippet
+to load org-jekyll:
+&lt;/p&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;;; ================================================== org jekyll
+(req-package org-jekyll
+  :require org
+  :load-path &quot;~/Documents/blog&quot;)
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;
+org-jekyll.el, located in Documents/blog
+please note the publishing function (differs from the reference at the top of the document)
+&lt;/p&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;;;; Emacs org-mode support for blogging with Jekyll.
+;;;
+;;; To use, just put this file somewhere in your emacs load path and
+;;; (require &#39;org-jekyll)
+;;;
+;;; An article showing its use can be found at:
+;;;    - http://www.gorgnegre.com/linux/using-emacs-orgmode-to-blog-with-jekyll.html
+;;;
+
+(provide &#39;org-jekyll)
+(require &#39;ox-publish)
+;; Define our org project to be exported. Run &quot;M-x org-export X pblog&quot; to
+;; export.
+(setq org-publish-project-alist
+      &#39;(
+
+        (&quot;org-pblog&quot;
+         :base-directory &quot;/Users/bachmann/Documents/blog/org/&quot; ;; Path to your org files.
+         :base-extension &quot;org&quot;
+         :publishing-directory &quot;/Users/bachmann/Documents/blog/jekyll/&quot; ;; Path to your Jekyll project.
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :headline-levels 6
+         :html-extension &quot;html&quot;
+         :body-only t ;; Only export section between &amp;amp;lt;body&amp;amp;gt; &amp;amp;lt;/body&amp;amp;gt; tags
+         :section-numbers nil
+         :table-of-contents nil
+
+         :author &quot;Gunther Bachmann&quot;
+         :email &quot;gunther.bachmann@web.de&quot;
+         )
+
+        (&quot;org-static-pblog&quot;
+         :base-directory &quot;/Users/bachmann/Documents/blog/org/&quot;
+         :base-extension &quot;css\\|js\\|png\\|jpg\\|ico\\|gif\\|pdf\\|mp3\\|flac\\|ogg\\|swf\\|php\\|markdown\\|md\\|html\\|htm\\|sh\\|xml\\|gz\\|bz2\\|vcf\\|zip\\|txt\\|tex\\|otf\\|ttf\\|eot\\|rb\\|yml\\|htaccess\\|gitignore&quot;
+         :publishing-directory &quot;/Users/bachmann/Documents/blog/jekyll/&quot;
+         :recursive t
+         :publishing-function org-publish-attachment)
+
+        (&quot;pblog&quot; :components (&quot;org-pblog&quot; &quot;org-static-pblog&quot;))
+
+        ))
+
+;; Improve our blogging experience with Org-Jekyll. This code sets four
+;; functions with corresponding key bindings:
+;;
+;; C-c j n - Create new draft
+;; C-c j P - Post current draft
+;; C-c j d - Show all drafts
+;; C-c j p - Show all posts
+;;
+;; Once a draft has been posted (i.e., moved from the _drafts
+;; directory to _post with the required date prefix in the filename), we
+;; then need to html-export it to the jekyll rootdir (with org-publish).
+
+(global-set-key (kbd &quot;C-c j n&quot;) &#39;jekyll-draft-post)
+(global-set-key (kbd &quot;C-c j P&quot;) &#39;jekyll-publish-post)
+(global-set-key (kbd &quot;C-c j p&quot;) (lambda ()
+                                  (interactive)
+                                  (find-file &quot;~/Documents/blog/org/_posts/&quot;)))
+(global-set-key (kbd &quot;C-c j d&quot;) (lambda ()
+                                  (interactive)
+                                  (find-file &quot;~/Documents/blog/org/_drafts/&quot;)))
+
+(defvar jekyll-directory &quot;~/Documents/blog/org/&quot;
+  &quot;Path to Jekyll blog.&quot;)
+(defvar jekyll-drafts-dir &quot;_drafts/&quot;
+  &quot;Relative path to drafts directory.&quot;)
+(defvar jekyll-posts-dir &quot;_posts/&quot;
+  &quot;Relative path to posts directory.&quot;)
+(defvar jekyll-post-ext &quot;.org&quot;
+  &quot;File extension of Jekyll posts.&quot;)
+(defvar jekyll-post-template
+  &quot;#+STARTUP: showall\n#+STARTUP: hidestars\n#+OPTIONS: H:2 num:nil tags:nil toc:1 timestamps:t\n#+BEGIN_HTML\n---\nlayout: post\ntitle: %s\nexcerpt: \ncategories:\n  -  \ntags:\n  -  \npublished: false\n---\n#+END_HTML\n\n** &quot;
+  &quot;Default template for Jekyll posts. %s will be replace by the post title.&quot;)
+
+(defun jekyll-make-slug (s)
+  &quot;Turn a string into a slug.&quot;
+  (replace-regexp-in-string
+   &quot; &quot; &quot;-&quot; (downcase
+            (replace-regexp-in-string
+             &quot;[^A-Za-z0-9 ]&quot; &quot;&quot; s))))
+
+(defun jekyll-yaml-escape (s)
+  &quot;Escape a string for YAML.&quot;
+  (if (or (string-match &quot;:&quot; s)
+          (string-match &quot;\&quot;&quot; s))
+      (concat &quot;\&quot;&quot; (replace-regexp-in-string &quot;\&quot;&quot; &quot;\\\\\&quot;&quot; s) &quot;\&quot;&quot;)
+    s))
+
+(defun jekyll-draft-post (title)
+  &quot;Create a new Jekyll blog post.&quot;
+  (interactive &quot;sPost Title: &quot;)
+  (let ((draft-file (concat jekyll-directory jekyll-drafts-dir
+                            (jekyll-make-slug title)
+                            jekyll-post-ext)))
+    (if (file-exists-p draft-file)
+        (find-file draft-file)
+      (find-file draft-file)
+      (insert (format jekyll-post-template (jekyll-yaml-escape title))))))
+
+(defun jekyll-publish-post ()
+  &quot;Move a draft post to the posts directory, and rename it so that it
+contains the date.&quot;
+  (interactive)
+  (cond
+   ((not (equal
+          (file-name-directory (buffer-file-name (current-buffer)))
+          (concat jekyll-directory jekyll-drafts-dir)))
+    (message &quot;This is not a draft post.&quot;)
+    (insert (file-name-directory (buffer-file-name (current-buffer))) &quot;\n&quot;
+            (concat jekyll-directory jekyll-drafts-dir)))
+   ((buffer-modified-p)
+    (message &quot;Can&#39;t publish post; buffer has modifications.&quot;))
+   (t
+    (let ((filename
+           (concat jekyll-directory jekyll-posts-dir
+                   (format-time-string &quot;%Y-%m-%d-&quot;)
+                   (file-name-nondirectory
+                    (buffer-file-name (current-buffer)))))
+          (old-point (point)))
+      (rename-file (buffer-file-name (current-buffer))
+                   filename)
+      (kill-buffer nil)
+      (find-file filename)
+      (set-window-point (selected-window) old-point)))))
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 </description>
         <pubDate>Fri, 11 Mar 2016 00:00:00 +0100</pubDate>
-        <link>http://gunther-bachmann.github.io/blogging/2016/03/11/emacs-jekyll-blogging.html</link>
-        <guid isPermaLink="true">http://gunther-bachmann.github.io/blogging/2016/03/11/emacs-jekyll-blogging.html</guid>
+        <link>http://yourdomain.com/blogging/2016/03/11/emacs-jekyll-blogging.html</link>
+        <guid isPermaLink="true">http://yourdomain.com/blogging/2016/03/11/emacs-jekyll-blogging.html</guid>
         
         <category>emacs</category>
         
