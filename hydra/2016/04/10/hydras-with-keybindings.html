@@ -71,14 +71,28 @@ in mind.
 <p>
 To help me to make use of these functions I tend to use hydras. I have
 one hydra that allows me to navigate to all hydras I have (bound to
-&lt;f1&gt; in the global key map). For functions that are bound to
-certain modes I usually have mode specific hydras that are mapped
-to &lt;f1&gt; within the respective mode.
+&lt;f1&gt; in the global key map).
 </p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span style="color: #c397d8;">(</span><span style="color: #a0d6e0;">bind-key</span> <span style="color: #b9ca4a;">"&lt;f1&gt;"</span> '<span style="color: #c0afa7;">hydra-allhydras/body</span><span style="color: #c397d8;">)</span>
+</pre>
+</div>
+
+<p>
+For functions that are bound to certain modes I usually have mode
+specific hydras that are mapped to &lt;f1&gt; within the respective mode
+(e.g. org agenda).
+</p>
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span style="color: #c397d8;">(</span><span style="color: #a0d6e0;">bind-key</span> <span style="color: #b9ca4a;">"&lt;f1&gt;"</span> '<span style="color: #bb99b4;">hydra-org-agenda-view/body</span> <span style="color: #a7aac0;">org-agenda-mode-map</span><span style="color: #c397d8;">)</span>
+</pre>
+</div>
 
 <p>
 Once I found the function (and used it successfully) I usually
-wonder by what keybinding this function can be reached by.
+wonder by what keybinding this function can be reached.
 </p>
 
 <p>
