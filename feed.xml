@@ -6,9 +6,137 @@
 </description>
     <link>http://gunther-bachmann.github.io/</link>
     <atom:link href="http://gunther-bachmann.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Mar 2016 17:48:47 +0100</pubDate>
-    <lastBuildDate>Fri, 11 Mar 2016 17:48:47 +0100</lastBuildDate>
+    <pubDate>Sun, 10 Apr 2016 15:14:27 +0200</pubDate>
+    <lastBuildDate>Sun, 10 Apr 2016 15:14:27 +0200</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>hydras with keybindings</title>
+        <description>&lt;div id=&quot;outline-container-orgheadline1&quot; class=&quot;outline-2&quot;&gt;
+&lt;h2 id=&quot;orgheadline1&quot;&gt;hydras with keybindings&lt;/h2&gt;
+&lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgheadline1&quot;&gt;
+&lt;p&gt;
+I&#39;ll never manage to remember all functions of all modes I
+use. Remebering their keybindings is even worse.  What I usually
+remember is that there is a function that does exactly what I have
+in mind.
+&lt;/p&gt;
+
+&lt;p&gt;
+To help me getting to these functions I tend to use hydras. I have
+one hydra that allows me to navigate to all hydras I have (bound to
+&amp;lt;f1&amp;gt; in the global key map). For functions that are bound to
+certain modes I usually have mode specific hydras that are mapped
+to &amp;lt;f1&amp;gt; within the respective mode.
+&lt;/p&gt;
+
+&lt;p&gt;
+Once I found the function (and used it successfully) I usually
+wonder what by what keybinding this function can be reached by.
+&lt;/p&gt;
+
+&lt;p&gt;
+Lazy as I am I did not try to find that keybinding since it took a couple of keystrokes too much.
+&lt;/p&gt;
+
+&lt;p&gt;
+Now I found a function that allows me to show the keybinding of functions I use in hydras.
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;keys-for-function&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a6bb99;&quot;&gt;fun-symbol&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #969896;&quot;&gt;&quot;find a key binding for the given function&lt;/span&gt;
+&lt;span style=&quot;color: #969896;&quot;&gt;  always returns a string (can be empty)&quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;(or (car (car (car (--filter (eq (car (cdr it)) fun-symbol) personal-keybindings)))) &quot;&quot;)&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;let&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a0d6e0;&quot;&gt;result&lt;/span&gt; &lt;span style=&quot;color: #e7c547;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b6a0e0;&quot;&gt;substitute-command-keys&lt;/span&gt; &lt;span style=&quot;color: #e78c45;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0a7bd;&quot;&gt;concat&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;\\[&quot;&lt;/span&gt; &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0a7bd;&quot;&gt;symbol-name&lt;/span&gt; &lt;span style=&quot;color: #a6bb99;&quot;&gt;fun-symbol&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;]&quot;&lt;/span&gt;&lt;span style=&quot;color: #e78c45;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;
+    &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #bb99b4;&quot;&gt;equal&lt;/span&gt; &lt;span style=&quot;color: #e7c547;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a3e0a0;&quot;&gt;substring&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;result&lt;/span&gt; &lt;span style=&quot;color: #a7aac0;&quot;&gt;0&lt;/span&gt; &lt;span style=&quot;color: #e78c45;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #9999bb;&quot;&gt;min&lt;/span&gt; &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #99bbb4;&quot;&gt;length&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;result&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #e0a0bc;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot;color: #e78c45;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;M-x&quot;&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;)&lt;/span&gt;
+        &lt;span style=&quot;color: #a3e0a0;&quot;&gt;q&lt;/span&gt;            &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;&quot;&lt;/span&gt;
+        &lt;span style=&quot;color: #a0d6e0;&quot;&gt;result&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+
+&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;hydra-combine-functions-w-key-bindings&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #9999bb;&quot;&gt;pairs&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #969896;&quot;&gt;&quot;return a string that can be put into hydra menu&lt;/span&gt;
+&lt;span style=&quot;color: #969896;&quot;&gt;  pairs must be a list of tuple of the form ( string . function )&lt;/span&gt;
+&lt;span style=&quot;color: #969896;&quot;&gt;  if a personal keybinding exists the string is concatenated with the &lt;/span&gt;
+&lt;span style=&quot;color: #969896;&quot;&gt;  keybinding of the respective function. if no keybining exists that&lt;/span&gt;
+&lt;span style=&quot;color: #969896;&quot;&gt;  pair is ignored for the rest of the function. all pairs found relevant&lt;/span&gt;
+&lt;span style=&quot;color: #969896;&quot;&gt;  are combined with line breaks in between.&lt;/span&gt;
+
+&lt;span style=&quot;color: #969896;&quot;&gt;  example call: (hydra-combine-functions-w-key-bindings &lt;/span&gt;
+&lt;span style=&quot;color: #969896;&quot;&gt;                   &#39;(( \&quot;some \&quot; . function )&lt;/span&gt;
+&lt;span style=&quot;color: #969896;&quot;&gt;                     ( \&quot;other\&quot; . mc/mark-previous-like-this )))&quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #e0a0bc;&quot;&gt;--reduce&lt;/span&gt; 
+   &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a6bb99;&quot;&gt;eq&lt;/span&gt; &lt;span style=&quot;color: #c0a7bd;&quot;&gt;it&lt;/span&gt; &lt;span style=&quot;color: #bb99b4;&quot;&gt;nil&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a0d6e0;&quot;&gt;format&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;%s&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;  %s&quot;&lt;/span&gt; &lt;span style=&quot;color: #9999bb;&quot;&gt;acc&lt;/span&gt; &lt;span style=&quot;color: #c0a7bd;&quot;&gt;it&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt; 
+   &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a7c0b9;&quot;&gt;-non-nil&lt;/span&gt; 
+    &lt;span style=&quot;color: #b9ca4a;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0afa7;&quot;&gt;--map&lt;/span&gt; 
+     &lt;span style=&quot;color: #e7c547;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;let&lt;/span&gt; &lt;span style=&quot;color: #e78c45;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #99bbb4;&quot;&gt;kb&lt;/span&gt; &lt;span style=&quot;color: #969896;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0afa7;&quot;&gt;keys-for-function&lt;/span&gt; &lt;span style=&quot;color: #eaeaea;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0a7bd;&quot;&gt;cdr&lt;/span&gt; &lt;span style=&quot;color: #c0a7bd;&quot;&gt;it&lt;/span&gt;&lt;span style=&quot;color: #eaeaea;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #969896;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #e78c45;&quot;&gt;)&lt;/span&gt; 
+       &lt;span style=&quot;color: #e78c45;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #99bbb4;&quot;&gt;string-empty-p&lt;/span&gt; &lt;span style=&quot;color: #99bbb4;&quot;&gt;kb&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #bb99b4;&quot;&gt;nil&lt;/span&gt; &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0a7bd;&quot;&gt;concat&lt;/span&gt; &lt;span style=&quot;color: #969896;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #99bbb4;&quot;&gt;car&lt;/span&gt; &lt;span style=&quot;color: #c0a7bd;&quot;&gt;it&lt;/span&gt;&lt;span style=&quot;color: #969896;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot; &amp;lt;&quot;&lt;/span&gt; &lt;span style=&quot;color: #99bbb4;&quot;&gt;kb&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;&amp;gt;&quot;&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #e78c45;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #9999bb;&quot;&gt;pairs&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Using these functions I can now add all keybindings which can be used
+within the current active key map. 
+&lt;/p&gt;
+
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;pre class=&quot;src src-emacs-lisp&quot;&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #e0a0bc;&quot;&gt;defhydra&lt;/span&gt; &lt;span style=&quot;color: #9999bb;&quot;&gt;hydra-multiple-cursors&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;:hint&lt;/span&gt; &lt;span style=&quot;color: #bb99b4;&quot;&gt;nil&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    ^Up^            ^Down^          ^Other^&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    ----------------------------------------------&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    [_p_]   Next    [_n_]   Next    [_l_] Edit lines&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    [_P_]   Skip    [_N_]   Skip    [_a_] Mark all&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    [_M-p_] Unmark  [_M-n_] Unmark  [_r_] Mark by regexp&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    ^ ^             ^ ^             [_m_] Mark by avy&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    ^ ^             ^ ^             [_q_] Quit&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;%s(hydra-combine-functions-w-key-bindings &lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;  &#39;((\&quot;    &lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;p&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;   Up-Next       \&quot; . mc/mark-previous-like-this)&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    (\&quot;    &lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;P&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;   Up-Skip       \&quot; . mc/skip-to-previous-like-this)&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    (\&quot;    &lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;M-p&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt; Up-Unmark     \&quot; . mc/unmark-previous-like-this)&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    (\&quot;    &lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;n&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;   Down-Next     \&quot; . mc/mark-next-like-this)&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    (\&quot;    &lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;N&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;   Down-Skip     \&quot; . mc/skip-to-next-like-this)&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    (\&quot;    &lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;M-n&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt; Down-Unmark   \&quot; . mc/unmark-next-like-this)&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    (\&quot;    &lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;l&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;   Edit lines    \&quot; . mc/edit-lines)&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    (\&quot;    &lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;a&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;   Mark all      \&quot; . mc/mark-all-like-this)&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    (\&quot;    &lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;r&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;   Mark by regexp\&quot; . mc/mark-all-in-region-regexp)&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    (\&quot;    &lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;[&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;m&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;]&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;   Mark by avy   \&quot; . ace-mc-add-multiple-cursors)))&lt;/span&gt;
+&lt;span style=&quot;color: #b9ca4a;&quot;&gt;    &quot;&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;l&quot;&lt;/span&gt; &lt;span style=&quot;color: #c0afa7;&quot;&gt;mc/edit-lines&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;:exit&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;a&quot;&lt;/span&gt; &lt;span style=&quot;color: #b3c0a7;&quot;&gt;mc/mark-all-like-this&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;:exit&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;n&quot;&lt;/span&gt; &lt;span style=&quot;color: #e0a0bc;&quot;&gt;mc/mark-next-like-this&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;N&quot;&lt;/span&gt; &lt;span style=&quot;color: #99bbb4;&quot;&gt;mc/skip-to-next-like-this&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;M-n&quot;&lt;/span&gt; &lt;span style=&quot;color: #9999bb;&quot;&gt;mc/unmark-next-like-this&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;p&quot;&lt;/span&gt; &lt;span style=&quot;color: #a7aac0;&quot;&gt;mc/mark-previous-like-this&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;P&quot;&lt;/span&gt; &lt;span style=&quot;color: #a3e0a0;&quot;&gt;mc/skip-to-previous-like-this&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;M-p&quot;&lt;/span&gt; &lt;span style=&quot;color: #a6bb99;&quot;&gt;mc/unmark-previous-like-this&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;r&quot;&lt;/span&gt; &lt;span style=&quot;color: #a7aac0;&quot;&gt;mc/mark-all-in-region-regexp&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;:exit&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;m&quot;&lt;/span&gt; &lt;span style=&quot;color: #bba699;&quot;&gt;ace-mc-add-multiple-cursors&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;:exit&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;t&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
+  &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;q&quot;&lt;/span&gt; &lt;span style=&quot;color: #bb99b4;&quot;&gt;nil&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;
+Using this hydra I get the following window:
+&lt;img src=&quot;hydra-with-bindings.png&quot; alt=&quot;hydra-with-bindings.png&quot; /&gt;
+It automatically brings up all commands that do have mapped key bindings.  
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Sun, 10 Apr 2016 00:00:00 +0200</pubDate>
+        <link>http://gunther-bachmann.github.io/blogging/2016/04/10/hydras-with-keybindings.html</link>
+        <guid isPermaLink="true">http://gunther-bachmann.github.io/blogging/2016/04/10/hydras-with-keybindings.html</guid>
+        
+        <category>emacs</category>
+        
+        <category>hydra</category>
+        
+        
+        <category>blogging</category>
+        
+      </item>
     
       <item>
         <title>Blogging with Emacs Org-mode and Jekyll</title>
@@ -230,6 +358,36 @@ please note the publishing function (differs from the reference at the top of th
       &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0afa7;&quot;&gt;kill-buffer&lt;/span&gt; &lt;span style=&quot;color: #bb99b4;&quot;&gt;nil&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt;
       &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a7aac0;&quot;&gt;find-file&lt;/span&gt; &lt;span style=&quot;color: #99bbb4;&quot;&gt;filename&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt;
       &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a6bb99;&quot;&gt;set-window-point&lt;/span&gt; &lt;span style=&quot;color: #969896;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #99bbb4;&quot;&gt;selected-window&lt;/span&gt;&lt;span style=&quot;color: #969896;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #a7c0b9;&quot;&gt;old-point&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #e78c45;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&quot;outline-container-orgheadline10&quot; class=&quot;outline-3&quot;&gt;
+&lt;h3 id=&quot;orgheadline10&quot;&gt;versioning blog entries&lt;/h3&gt;
+&lt;div class=&quot;outline-text-3&quot; id=&quot;text-orgheadline10&quot;&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;the blog root directory is a git repository&lt;/li&gt;
+&lt;li&gt;jekyll gets a .gitignore with the following entries (ignoring all files generated)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;i&gt;Users/bachmann/Documents/blog/org/&lt;sub&gt;posts&lt;/sub&gt;&lt;/i&gt;
+~/Documents/blog/org/&lt;sub&gt;drafts&lt;/sub&gt;/#+BEGIN&lt;sub&gt;SRC&lt;/sub&gt; gitignore
+     _site/*          
+     .sass-cache/*    
+     _posts/*         
+     feed.xml         
+     index.html       
+#+END&lt;sub&gt;SRC&lt;/sub&gt;
+&lt;/p&gt;
+&lt;ul class=&quot;org-ul&quot;&gt;
+&lt;li&gt;_site is already versioned within github pages&lt;/li&gt;
+&lt;li&gt;.sass&lt;sub&gt;cache&lt;/sub&gt; is used during jekyll build&lt;/li&gt;
+&lt;li&gt;_posts contains html-files generated by the emacs export&lt;/li&gt;
+&lt;li&gt;feed.xml and index.html are adjusted upon build to hold the new blog-references&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;org-src-container&quot;&gt;
+
+&lt;pre class=&quot;src src-bash&quot;&gt;&lt;span style=&quot;color: #b3c0a7;&quot;&gt;git&lt;/span&gt; &lt;span style=&quot;color: #c0a7bd;&quot;&gt;init&lt;/span&gt; &lt;span style=&quot;color: #b3c0a7;&quot;&gt;.&lt;/span&gt; &lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;# &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;executed within root dir of the blog&lt;/span&gt;
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;

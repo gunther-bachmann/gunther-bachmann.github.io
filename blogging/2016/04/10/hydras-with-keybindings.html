@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>hydras with keybindings</title>
+  <meta name="description" content="hydras with keybindingsI'll never manage to remember all functions of all modes Iuse. Remebering their keybindings is even worse.  What I usuallyremember is ...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://gunther-bachmann.github.io/blogging/2016/04/10/hydras-with-keybindings.html">
+  <link rel="alternate" type="application/rss+xml" title="Personal Blog" href="http://gunther-bachmann.github.io/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Personal Blog</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">hydras with keybindings</h1>
+    <p class="post-meta"><time datetime="2016-04-10T00:00:00+02:00" itemprop="datePublished">Apr 10, 2016</time></p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <div id="outline-container-orgheadline1" class="outline-2">
+<h2 id="orgheadline1">hydras with keybindings</h2>
+<div class="outline-text-2" id="text-orgheadline1">
+<p>
+I'll never manage to remember all functions of all modes I
+use. Remebering their keybindings is even worse.  What I usually
+remember is that there is a function that does exactly what I have
+in mind.
+</p>
+
+<p>
+To help me getting to these functions I tend to use hydras. I have
+one hydra that allows me to navigate to all hydras I have (bound to
+&lt;f1&gt; in the global key map). For functions that are bound to
+certain modes I usually have mode specific hydras that are mapped
+to &lt;f1&gt; within the respective mode.
+</p>
+
+<p>
+Once I found the function (and used it successfully) I usually
+wonder what by what keybinding this function can be reached by.
+</p>
+
+<p>
+Lazy as I am I did not try to find that keybinding since it took a couple of keystrokes too much.
+</p>
+
+<p>
+Now I found a function that allows me to show the keybinding of functions I use in hydras.
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span style="color: #c397d8;">(</span><span style="color: #c397d8;">defun</span> <span style="color: #7aa6da;">keys-for-function</span> <span style="color: #7aa6da;">(</span><span style="color: #a6bb99;">fun-symbol</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #969896;">"find a key binding for the given function</span>
+<span style="color: #969896;">  always returns a string (can be empty)"</span>
+  <span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">(or (car (car (car (--filter (eq (car (cdr it)) fun-symbol) personal-keybindings)))) "")</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #c397d8;">let</span> <span style="color: #70c0b1;">(</span><span style="color: #b9ca4a;">(</span><span style="color: #a0d6e0;">result</span> <span style="color: #e7c547;">(</span><span style="color: #b6a0e0;">substitute-command-keys</span> <span style="color: #e78c45;">(</span><span style="color: #c0a7bd;">concat</span> <span style="color: #b9ca4a;">"\\["</span> <span style="color: #d54e53;">(</span><span style="color: #c0a7bd;">symbol-name</span> <span style="color: #a6bb99;">fun-symbol</span><span style="color: #d54e53;">)</span> <span style="color: #b9ca4a;">"]"</span><span style="color: #e78c45;">)</span><span style="color: #e7c547;">)</span><span style="color: #b9ca4a;">)</span><span style="color: #70c0b1;">)</span>
+    <span style="color: #70c0b1;">(</span><span style="color: #c397d8;">if</span> <span style="color: #b9ca4a;">(</span><span style="color: #bb99b4;">equal</span> <span style="color: #e7c547;">(</span><span style="color: #a3e0a0;">substring</span> <span style="color: #a0d6e0;">result</span> <span style="color: #a7aac0;">0</span> <span style="color: #e78c45;">(</span><span style="color: #9999bb;">min</span> <span style="color: #d54e53;">(</span><span style="color: #99bbb4;">length</span> <span style="color: #a0d6e0;">result</span><span style="color: #d54e53;">)</span> <span style="color: #e0a0bc;">3</span><span style="color: #e78c45;">)</span><span style="color: #e7c547;">)</span> <span style="color: #b9ca4a;">"M-x"</span><span style="color: #b9ca4a;">)</span>
+        <span style="color: #a3e0a0;">q</span>            <span style="color: #b9ca4a;">""</span>
+        <span style="color: #a0d6e0;">result</span><span style="color: #70c0b1;">)</span><span style="color: #7aa6da;">)</span><span style="color: #c397d8;">)</span>
+
+<span style="color: #c397d8;">(</span><span style="color: #c397d8;">defun</span> <span style="color: #7aa6da;">hydra-combine-functions-w-key-bindings</span> <span style="color: #7aa6da;">(</span><span style="color: #9999bb;">pairs</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #969896;">"return a string that can be put into hydra menu</span>
+<span style="color: #969896;">  pairs must be a list of tuple of the form ( string . function )</span>
+<span style="color: #969896;">  if a personal keybinding exists the string is concatenated with the </span>
+<span style="color: #969896;">  keybinding of the respective function. if no keybining exists that</span>
+<span style="color: #969896;">  pair is ignored for the rest of the function. all pairs found relevant</span>
+<span style="color: #969896;">  are combined with line breaks in between.</span>
+
+<span style="color: #969896;">  example call: (hydra-combine-functions-w-key-bindings </span>
+<span style="color: #969896;">                   '(( \"some \" . function )</span>
+<span style="color: #969896;">                     ( \"other\" . mc/mark-previous-like-this )))"</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #e0a0bc;">--reduce</span> 
+   <span style="color: #70c0b1;">(</span><span style="color: #c397d8;">if</span> <span style="color: #b9ca4a;">(</span><span style="color: #a6bb99;">eq</span> <span style="color: #c0a7bd;">it</span> <span style="color: #bb99b4;">nil</span><span style="color: #b9ca4a;">)</span> <span style="color: #b9ca4a;">""</span> <span style="color: #b9ca4a;">(</span><span style="color: #a0d6e0;">format</span> <span style="color: #b9ca4a;">"%s</span>
+<span style="color: #b9ca4a;">  %s"</span> <span style="color: #9999bb;">acc</span> <span style="color: #c0a7bd;">it</span><span style="color: #b9ca4a;">)</span><span style="color: #70c0b1;">)</span> 
+   <span style="color: #70c0b1;">(</span><span style="color: #a7c0b9;">-non-nil</span> 
+    <span style="color: #b9ca4a;">(</span><span style="color: #c0afa7;">--map</span> 
+     <span style="color: #e7c547;">(</span><span style="color: #c397d8;">let</span> <span style="color: #e78c45;">(</span><span style="color: #d54e53;">(</span><span style="color: #99bbb4;">kb</span> <span style="color: #969896;">(</span><span style="color: #c0afa7;">keys-for-function</span> <span style="color: #eaeaea;">(</span><span style="color: #c0a7bd;">cdr</span> <span style="color: #c0a7bd;">it</span><span style="color: #eaeaea;">)</span><span style="color: #969896;">)</span><span style="color: #d54e53;">)</span><span style="color: #e78c45;">)</span> 
+       <span style="color: #e78c45;">(</span><span style="color: #c397d8;">if</span> <span style="color: #d54e53;">(</span><span style="color: #99bbb4;">string-empty-p</span> <span style="color: #99bbb4;">kb</span><span style="color: #d54e53;">)</span> <span style="color: #bb99b4;">nil</span> <span style="color: #d54e53;">(</span><span style="color: #c0a7bd;">concat</span> <span style="color: #969896;">(</span><span style="color: #99bbb4;">car</span> <span style="color: #c0a7bd;">it</span><span style="color: #969896;">)</span> <span style="color: #b9ca4a;">" &lt;"</span> <span style="color: #99bbb4;">kb</span> <span style="color: #b9ca4a;">"&gt;"</span><span style="color: #d54e53;">)</span><span style="color: #e78c45;">)</span><span style="color: #e7c547;">)</span> <span style="color: #9999bb;">pairs</span><span style="color: #b9ca4a;">)</span><span style="color: #70c0b1;">)</span><span style="color: #7aa6da;">)</span><span style="color: #c397d8;">)</span>
+</pre>
+</div>
+
+<p>
+Using these functions I can now add all keybindings which can be used
+within the current active key map. 
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span style="color: #c397d8;">(</span><span style="color: #e0a0bc;">defhydra</span> <span style="color: #9999bb;">hydra-multiple-cursors</span> <span style="color: #7aa6da;">(</span><span style="color: #70c0b1;">:hint</span> <span style="color: #bb99b4;">nil</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #b9ca4a;">"</span>
+<span style="color: #b9ca4a;">    ^Up^            ^Down^          ^Other^</span>
+<span style="color: #b9ca4a;">    ----------------------------------------------</span>
+<span style="color: #b9ca4a;">    [_p_]   Next    [_n_]   Next    [_l_] Edit lines</span>
+<span style="color: #b9ca4a;">    [_P_]   Skip    [_N_]   Skip    [_a_] Mark all</span>
+<span style="color: #b9ca4a;">    [_M-p_] Unmark  [_M-n_] Unmark  [_r_] Mark by regexp</span>
+<span style="color: #b9ca4a;">    ^ ^             ^ ^             [_m_] Mark by avy</span>
+<span style="color: #b9ca4a;">    ^ ^             ^ ^             [_q_] Quit</span>
+<span style="color: #b9ca4a;">%s(hydra-combine-functions-w-key-bindings </span>
+<span style="color: #b9ca4a;">  '((\"    </span><span style="color: #7aa6da;">[</span><span style="color: #b9ca4a;">p</span><span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">   Up-Next       \" . mc/mark-previous-like-this)</span>
+<span style="color: #b9ca4a;">    (\"    </span><span style="color: #7aa6da;">[</span><span style="color: #b9ca4a;">P</span><span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">   Up-Skip       \" . mc/skip-to-previous-like-this)</span>
+<span style="color: #b9ca4a;">    (\"    </span><span style="color: #7aa6da;">[</span><span style="color: #b9ca4a;">M-p</span><span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;"> Up-Unmark     \" . mc/unmark-previous-like-this)</span>
+<span style="color: #b9ca4a;">    (\"    </span><span style="color: #7aa6da;">[</span><span style="color: #b9ca4a;">n</span><span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">   Down-Next     \" . mc/mark-next-like-this)</span>
+<span style="color: #b9ca4a;">    (\"    </span><span style="color: #7aa6da;">[</span><span style="color: #b9ca4a;">N</span><span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">   Down-Skip     \" . mc/skip-to-next-like-this)</span>
+<span style="color: #b9ca4a;">    (\"    </span><span style="color: #7aa6da;">[</span><span style="color: #b9ca4a;">M-n</span><span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;"> Down-Unmark   \" . mc/unmark-next-like-this)</span>
+<span style="color: #b9ca4a;">    (\"    </span><span style="color: #7aa6da;">[</span><span style="color: #b9ca4a;">l</span><span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">   Edit lines    \" . mc/edit-lines)</span>
+<span style="color: #b9ca4a;">    (\"    </span><span style="color: #7aa6da;">[</span><span style="color: #b9ca4a;">a</span><span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">   Mark all      \" . mc/mark-all-like-this)</span>
+<span style="color: #b9ca4a;">    (\"    </span><span style="color: #7aa6da;">[</span><span style="color: #b9ca4a;">r</span><span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">   Mark by regexp\" . mc/mark-all-in-region-regexp)</span>
+<span style="color: #b9ca4a;">    (\"    </span><span style="color: #7aa6da;">[</span><span style="color: #b9ca4a;">m</span><span style="color: #7aa6da;">]</span><span style="color: #b9ca4a;">   Mark by avy   \" . ace-mc-add-multiple-cursors)))</span>
+<span style="color: #b9ca4a;">    "</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #b9ca4a;">"l"</span> <span style="color: #c0afa7;">mc/edit-lines</span> <span style="color: #70c0b1;">:exit</span> <span style="color: #a0d6e0;">t</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #b9ca4a;">"a"</span> <span style="color: #b3c0a7;">mc/mark-all-like-this</span> <span style="color: #70c0b1;">:exit</span> <span style="color: #a0d6e0;">t</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #b9ca4a;">"n"</span> <span style="color: #e0a0bc;">mc/mark-next-like-this</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #b9ca4a;">"N"</span> <span style="color: #99bbb4;">mc/skip-to-next-like-this</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #b9ca4a;">"M-n"</span> <span style="color: #9999bb;">mc/unmark-next-like-this</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #b9ca4a;">"p"</span> <span style="color: #a7aac0;">mc/mark-previous-like-this</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #b9ca4a;">"P"</span> <span style="color: #a3e0a0;">mc/skip-to-previous-like-this</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #b9ca4a;">"M-p"</span> <span style="color: #a6bb99;">mc/unmark-previous-like-this</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #b9ca4a;">"r"</span> <span style="color: #a7aac0;">mc/mark-all-in-region-regexp</span> <span style="color: #70c0b1;">:exit</span> <span style="color: #a0d6e0;">t</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #b9ca4a;">"m"</span> <span style="color: #bba699;">ace-mc-add-multiple-cursors</span> <span style="color: #70c0b1;">:exit</span> <span style="color: #a0d6e0;">t</span><span style="color: #7aa6da;">)</span>
+  <span style="color: #7aa6da;">(</span><span style="color: #b9ca4a;">"q"</span> <span style="color: #bb99b4;">nil</span><span style="color: #7aa6da;">)</span><span style="color: #c397d8;">)</span>
+</pre>
+</div>
+
+<p>
+Using this hydra I get the following window:
+<img src="hydra-with-bindings.png" alt="hydra-with-bindings.png" />
+It automatically brings up all commands that do have mapped key bindings.  
+</p>
+</div>
+</div>
+
+  </div>
+
+</article>
+
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Personal Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>Personal Blog</li>
+          <li><a href="mailto:"></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/gunther-bachmann"><span class="icon icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">gunther-bachmann</span></a>
+
+          </li>
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Personal endeavors into emacs and clojure
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
