@@ -1,6 +1,0 @@
-* About this blog
-  This blog is my first venture into blogging
-** Intention
-   It will mostly be about emacs and clojure related stuff
-** Expected audience
-   Mostly functional geeks

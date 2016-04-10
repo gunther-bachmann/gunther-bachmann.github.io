@@ -1,18 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Personal Blog</title>
-    <description>Personal endeavors into emacs and clojure
-</description>
-    <link>http://gunther-bachmann.github.io/</link>
-    <atom:link href="http://gunther-bachmann.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Apr 2016 16:56:33 +0200</pubDate>
-    <lastBuildDate>Sun, 10 Apr 2016 16:56:33 +0200</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
-    
-      <item>
-        <title>hydras with keybindings</title>
-        <description>&lt;div id=&quot;outline-container-orgheadline1&quot; class=&quot;outline-2&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Jekyll Bootstrap</title>
+ <link href="http://username.github.io/atom.xml" rel="self"/>
+ <link href="http://username.github.io"/>
+ <updated>2016-04-10T19:30:07+02:00</updated>
+ <id>http://username.github.io</id>
+ <author>
+   <name>Name Lastname</name>
+   <email>blah@email.test</email>
+ </author>
+
+ 
+ <entry>
+   <title>hydras with keybindings</title>
+   <link href="http://username.github.io/hydra/2016/04/10/hydras-with-keybindings"/>
+   <updated>2016-04-10T00:00:00+02:00</updated>
+   <id>http://username.github.io/hydra/2016/04/10/hydras-with-keybindings</id>
+   <content type="html">&lt;div id=&quot;outline-container-orgheadline1&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;orgheadline1&quot;&gt;Hydras with keybinding hints of functions used&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgheadline1&quot;&gt;
 &lt;p&gt;
@@ -152,21 +157,15 @@ It automatically brings up all commands that do have mapped key bindings.
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-        <pubDate>Sun, 10 Apr 2016 00:00:00 +0200</pubDate>
-        <link>http://gunther-bachmann.github.io/hydra/2016/04/10/hydras-with-keybindings.html</link>
-        <guid isPermaLink="true">http://gunther-bachmann.github.io/hydra/2016/04/10/hydras-with-keybindings.html</guid>
-        
-        <category>emacs</category>
-        
-        
-        <category>hydra</category>
-        
-      </item>
-    
-      <item>
-        <title>Blogging with Emacs Org-mode and Jekyll</title>
-        <description>&lt;div id=&quot;outline-container-orgheadline1&quot; class=&quot;outline-2&quot;&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Blogging with Emacs Org-mode and Jekyll</title>
+   <link href="http://username.github.io/blogging/2016/03/11/emacs-jekyll-blogging"/>
+   <updated>2016-03-11T00:00:00+01:00</updated>
+   <id>http://username.github.io/blogging/2016/03/11/emacs-jekyll-blogging</id>
+   <content type="html">&lt;div id=&quot;outline-container-orgheadline1&quot; class=&quot;outline-2&quot;&gt;
 &lt;h2 id=&quot;orgheadline1&quot;&gt;installation&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgheadline1&quot;&gt;
 &lt;p&gt;
@@ -419,23 +418,8 @@ please note the publishing function (differs from the reference at the top of th
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</description>
-        <pubDate>Fri, 11 Mar 2016 00:00:00 +0100</pubDate>
-        <link>http://gunther-bachmann.github.io/blogging/2016/03/11/emacs-jekyll-blogging.html</link>
-        <guid isPermaLink="true">http://gunther-bachmann.github.io/blogging/2016/03/11/emacs-jekyll-blogging.html</guid>
-        
-        <category>emacs</category>
-        
-        <category>org-mode</category>
-        
-        <category>jekyll</category>
-        
-        <category>web</category>
-        
-        
-        <category>blogging</category>
-        
-      </item>
-    
-  </channel>
-</rss>
+</content>
+ </entry>
+ 
+ 
+</feed>
