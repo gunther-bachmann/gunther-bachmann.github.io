@@ -6,14 +6,14 @@
 </description>
     <link>http://gunther-bachmann.github.io/</link>
     <atom:link href="http://gunther-bachmann.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Apr 2016 16:39:23 +0200</pubDate>
-    <lastBuildDate>Sun, 10 Apr 2016 16:39:23 +0200</lastBuildDate>
+    <pubDate>Sun, 10 Apr 2016 16:56:33 +0200</pubDate>
+    <lastBuildDate>Sun, 10 Apr 2016 16:56:33 +0200</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
         <title>hydras with keybindings</title>
         <description>&lt;div id=&quot;outline-container-orgheadline1&quot; class=&quot;outline-2&quot;&gt;
-&lt;h2 id=&quot;orgheadline1&quot;&gt;hydras with keybindings&lt;/h2&gt;
+&lt;h2 id=&quot;orgheadline1&quot;&gt;Hydras with keybinding hints of functions used&lt;/h2&gt;
 &lt;div class=&quot;outline-text-2&quot; id=&quot;text-orgheadline1&quot;&gt;
 &lt;p&gt;
 I&#39;ll never manage to remember all functions of all modes I
@@ -23,7 +23,7 @@ in mind.
 &lt;/p&gt;
 
 &lt;p&gt;
-To help me to make use of these functions I tend to use hydras. I have
+To help me make use of these functions I tend to use hydras. I have
 one hydra that allows me to navigate to all hydras I have (bound to
 &amp;lt;f1&amp;gt; in the global key map).
 &lt;/p&gt;
@@ -56,7 +56,10 @@ takes a couple of keystrokes too much.
 
 &lt;p&gt;
 Now I found a way that allows me to show the keybinding of
-functions I use in hydras.
+functions I use in hydras. Giving credit where it belongs: I make
+use of &#39;substitute-command-keys&#39; and several dash functions.
+Everything else is just glue code. Since I am an elisp newbie I&#39;m
+always interested in feedback to make code more idiomatic.
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;
@@ -64,10 +67,9 @@ functions I use in hydras.
 &lt;pre class=&quot;src src-emacs-lisp&quot;&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;keys-for-function&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a6bb99;&quot;&gt;fun-symbol&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
   &lt;span style=&quot;color: #969896;&quot;&gt;&quot;find a key binding for the given function&lt;/span&gt;
 &lt;span style=&quot;color: #969896;&quot;&gt;  always returns a string (can be empty)&quot;&lt;/span&gt;
-  &lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;;; &lt;/span&gt;&lt;span style=&quot;color: #969896; font-style: italic;&quot;&gt;(or (car (car (car (--filter (eq (car (cdr it)) fun-symbol) personal-keybindings)))) &quot;&quot;)&lt;/span&gt;
   &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;let&lt;/span&gt; &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a0d6e0;&quot;&gt;result&lt;/span&gt; &lt;span style=&quot;color: #e7c547;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #b6a0e0;&quot;&gt;substitute-command-keys&lt;/span&gt; &lt;span style=&quot;color: #e78c45;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0a7bd;&quot;&gt;concat&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;\\[&quot;&lt;/span&gt; &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c0a7bd;&quot;&gt;symbol-name&lt;/span&gt; &lt;span style=&quot;color: #a6bb99;&quot;&gt;fun-symbol&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;]&quot;&lt;/span&gt;&lt;span style=&quot;color: #e78c45;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;
     &lt;span style=&quot;color: #70c0b1;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;if&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #bb99b4;&quot;&gt;equal&lt;/span&gt; &lt;span style=&quot;color: #e7c547;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #a3e0a0;&quot;&gt;substring&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;result&lt;/span&gt; &lt;span style=&quot;color: #a7aac0;&quot;&gt;0&lt;/span&gt; &lt;span style=&quot;color: #e78c45;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #9999bb;&quot;&gt;min&lt;/span&gt; &lt;span style=&quot;color: #d54e53;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #99bbb4;&quot;&gt;length&lt;/span&gt; &lt;span style=&quot;color: #a0d6e0;&quot;&gt;result&lt;/span&gt;&lt;span style=&quot;color: #d54e53;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #e0a0bc;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot;color: #e78c45;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #e7c547;&quot;&gt;)&lt;/span&gt; &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;M-x&quot;&lt;/span&gt;&lt;span style=&quot;color: #b9ca4a;&quot;&gt;)&lt;/span&gt;
-        &lt;span style=&quot;color: #a3e0a0;&quot;&gt;q&lt;/span&gt;            &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;&quot;&lt;/span&gt;
+        &lt;span style=&quot;color: #b9ca4a;&quot;&gt;&quot;&quot;&lt;/span&gt;
         &lt;span style=&quot;color: #a0d6e0;&quot;&gt;result&lt;/span&gt;&lt;span style=&quot;color: #70c0b1;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;)&lt;/span&gt;
 
 &lt;span style=&quot;color: #c397d8;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c397d8;&quot;&gt;defun&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;hydra-combine-functions-w-key-bindings&lt;/span&gt; &lt;span style=&quot;color: #7aa6da;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #9999bb;&quot;&gt;pairs&lt;/span&gt;&lt;span style=&quot;color: #7aa6da;&quot;&gt;)&lt;/span&gt;
@@ -92,8 +94,10 @@ functions I use in hydras.
 &lt;/div&gt;
 
 &lt;p&gt;
-Using these functions I can now add all keybindings which can be used
-within the current active key map. 
+Using these functions I can now add all keybindings which can be
+used within the current active key map. To achieve this, I use the
+possibility to add arbitrary function execution into the hydra menu
+strings through &#39;%s&#39;.
 &lt;/p&gt;
 
 &lt;div class=&quot;org-src-container&quot;&gt;

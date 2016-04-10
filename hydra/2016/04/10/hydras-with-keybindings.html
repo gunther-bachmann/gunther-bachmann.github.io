@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>hydras with keybindings</title>
-  <meta name="description" content="hydras with keybindingsI'll never manage to remember all functions of all modes Iuse. Remembering their keybindings is even worse.  What I usuallyremember is...">
+  <meta name="description" content="Hydras with keybinding hints of functions usedI'll never manage to remember all functions of all modes Iuse. Remembering their keybindings is even worse.  Wh...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://gunther-bachmann.github.io/hydra/2016/04/10/hydras-with-keybindings.html">
@@ -59,7 +59,7 @@
 
   <div class="post-content" itemprop="articleBody">
     <div id="outline-container-orgheadline1" class="outline-2">
-<h2 id="orgheadline1">hydras with keybindings</h2>
+<h2 id="orgheadline1">Hydras with keybinding hints of functions used</h2>
 <div class="outline-text-2" id="text-orgheadline1">
 <p>
 I'll never manage to remember all functions of all modes I
@@ -69,7 +69,7 @@ in mind.
 </p>
 
 <p>
-To help me to make use of these functions I tend to use hydras. I have
+To help me make use of these functions I tend to use hydras. I have
 one hydra that allows me to navigate to all hydras I have (bound to
 &lt;f1&gt; in the global key map).
 </p>
@@ -102,7 +102,10 @@ takes a couple of keystrokes too much.
 
 <p>
 Now I found a way that allows me to show the keybinding of
-functions I use in hydras.
+functions I use in hydras. Giving credit where it belongs: I make
+use of 'substitute-command-keys' and several dash functions.
+Everything else is just glue code. Since I am an elisp newbie I'm
+always interested in feedback to make code more idiomatic.
 </p>
 
 <div class="org-src-container">
@@ -110,10 +113,9 @@ functions I use in hydras.
 <pre class="src src-emacs-lisp"><span style="color: #c397d8;">(</span><span style="color: #c397d8;">defun</span> <span style="color: #7aa6da;">keys-for-function</span> <span style="color: #7aa6da;">(</span><span style="color: #a6bb99;">fun-symbol</span><span style="color: #7aa6da;">)</span>
   <span style="color: #969896;">"find a key binding for the given function</span>
 <span style="color: #969896;">  always returns a string (can be empty)"</span>
-  <span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">(or (car (car (car (--filter (eq (car (cdr it)) fun-symbol) personal-keybindings)))) "")</span>
   <span style="color: #7aa6da;">(</span><span style="color: #c397d8;">let</span> <span style="color: #70c0b1;">(</span><span style="color: #b9ca4a;">(</span><span style="color: #a0d6e0;">result</span> <span style="color: #e7c547;">(</span><span style="color: #b6a0e0;">substitute-command-keys</span> <span style="color: #e78c45;">(</span><span style="color: #c0a7bd;">concat</span> <span style="color: #b9ca4a;">"\\["</span> <span style="color: #d54e53;">(</span><span style="color: #c0a7bd;">symbol-name</span> <span style="color: #a6bb99;">fun-symbol</span><span style="color: #d54e53;">)</span> <span style="color: #b9ca4a;">"]"</span><span style="color: #e78c45;">)</span><span style="color: #e7c547;">)</span><span style="color: #b9ca4a;">)</span><span style="color: #70c0b1;">)</span>
     <span style="color: #70c0b1;">(</span><span style="color: #c397d8;">if</span> <span style="color: #b9ca4a;">(</span><span style="color: #bb99b4;">equal</span> <span style="color: #e7c547;">(</span><span style="color: #a3e0a0;">substring</span> <span style="color: #a0d6e0;">result</span> <span style="color: #a7aac0;">0</span> <span style="color: #e78c45;">(</span><span style="color: #9999bb;">min</span> <span style="color: #d54e53;">(</span><span style="color: #99bbb4;">length</span> <span style="color: #a0d6e0;">result</span><span style="color: #d54e53;">)</span> <span style="color: #e0a0bc;">3</span><span style="color: #e78c45;">)</span><span style="color: #e7c547;">)</span> <span style="color: #b9ca4a;">"M-x"</span><span style="color: #b9ca4a;">)</span>
-        <span style="color: #a3e0a0;">q</span>            <span style="color: #b9ca4a;">""</span>
+        <span style="color: #b9ca4a;">""</span>
         <span style="color: #a0d6e0;">result</span><span style="color: #70c0b1;">)</span><span style="color: #7aa6da;">)</span><span style="color: #c397d8;">)</span>
 
 <span style="color: #c397d8;">(</span><span style="color: #c397d8;">defun</span> <span style="color: #7aa6da;">hydra-combine-functions-w-key-bindings</span> <span style="color: #7aa6da;">(</span><span style="color: #9999bb;">pairs</span><span style="color: #7aa6da;">)</span>
@@ -138,8 +140,10 @@ functions I use in hydras.
 </div>
 
 <p>
-Using these functions I can now add all keybindings which can be used
-within the current active key map. 
+Using these functions I can now add all keybindings which can be
+used within the current active key map. To achieve this, I use the
+possibility to add arbitrary function execution into the hydra menu
+strings through '%s'.
 </p>
 
 <div class="org-src-container">
